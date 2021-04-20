@@ -1,0 +1,40 @@
+<div class="box">
+    <div class="box-body table-responsive no-padding">
+        <table id="list1" class="table table-bordered table-hover dataTable">
+            <thead>
+			<th>ID</th>
+			<th style="width: 100px;">Имя Фамилия</th>
+            <th>Телефон</th>
+            <th>Оплаты</th>
+            <th>Дата регистрации</th>
+            <th>Специальности</th>
+            </thead>
+            <tbody>
+            <% for (const user in chartData){ %>
+            <% let d = new Date(); %>
+            <tr>
+                <td><%= chartData[user].id %></td>
+                <td><%= `${chartData[user].name} ${chartData[user].surname}` %></td>
+                <td><span style="color: #460014; font-weight: bold; margin-right: 10px;"><%= chartData[user].phoneNumber %></span></td>
+                <td><% chartData[user]["payments"].forEach((payment)=>{
+                    %>
+                    <div>
+                        <% d.setTime(payment["createdAt"]) %><%= d.toLocaleDateString() %> / <%= payment.amount %>
+                    </div>
+                    <%
+                    }) %></td>
+                <td><% d.setTime(chartData[user].createdAt) %><%= d.toLocaleDateString() %></td>
+                <td><%= chartData[user].jobTypes %></td>
+            </tr>
+            <% } %>
+            </tbody>
+        </table>
+    </div>
+</div>
+<script>
+    $(function () {
+        $("#list1").DataTable({
+            "pageLength": 15
+        });
+    });
+</script>

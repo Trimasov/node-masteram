@@ -1,0 +1,27 @@
+<div class="box">
+    <div class="box-body table-responsive no-padding">
+        <table id="list1" class="table table-bordered table-hover dataTable">
+            <thead>
+			<th style="width: 100px;">Услуга</th>
+            <th>Кол-во</th>
+            <th>Сумма</th>
+            </thead>
+            <tbody>
+            <% for (const service of chartData){ %>
+            <tr>
+                <td><%= service.serviceName %></td>
+                <td><%= service.cnt %></td>
+                <td><%= service.cnt_amount %></td>
+            </tr>
+            <% } %>
+            </tbody>
+        </table>
+    </div>
+</div>
+<script>
+    $(function () {
+        $("#list1").DataTable({
+            "pageLength": 15
+        });
+    });
+</script>

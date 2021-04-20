@@ -1,0 +1,117 @@
+<div class="row">
+    <div class="col-md-12">
+        <a class="btn btn-primary mb-1" href="/admin/partnerslist">к списку</a>
+        <!-- general form elements -->
+        <div class="box box-primary">
+            <!-- form start -->
+            <form role="form" name="saveBanner" method="post" enctype="multipart/form-data">
+                <div class="box-body">
+                    <div class="form-group">
+                        <label for="name">Название</label>
+                        <input type="text" class="form-control" name="name" id="name" placeholder="Введите название" value="<%= partner ? partner.name: ""%>">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="name">Телефон</label>
+                        <input
+                            type="text"
+                            class="form-control"
+                            name="phoneNumber"
+                            id="phoneNumber"
+                            placeholder="Введите номер телефона"
+                            value="<%= partner ? partner.phoneNumber: ""%>">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="name">Email</label>
+                        <input
+                            type="text"
+                            class="form-control"
+                            name="email"
+                            id="email"
+                            placeholder="Введите emial"
+                            value="<%= partner ? partner.email: ""%>">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="name">Email для купона</label>
+                        <input
+                            type="text"
+                            class="form-control"
+                            name="emailForCoupon"
+                            id="emailForCoupon"
+                            placeholder="Введите emial для купона"
+                            value="<%= partner ? partner.emailForCoupon: ""%>">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="couponDescription">Описание купона</label>
+                        <textarea class="form-control" id="couponDescription" name="couponDescription"><%= partner ? partner.couponDescription: ""%></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="searchWords">Поисковые слова</label>
+                        <textarea class="form-control" id="searchWords" name="searchWords"><%= partner ? partner.searchWords: ""%></textarea>
+                    </div>
+
+                    <div class="checkbox">
+                        <label>
+                            <input value="1"  type="checkbox" name="couponOn" <%= partner.couponOn ? "checked": "" %>/> Включить/выключить купоны
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="name">Длительность купона</label>
+                        <input
+                            type="number"
+                            class="form-control"
+                            name="couponTerm"
+                            id="couponTerm"
+                            placeholder="Введите длительность купона"
+                            value="<%= partner ? partner.couponTerm: ""%>">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="name">Абривиатура</label>
+                        <input
+                            type="text"
+                            class="form-control"
+                            name="couponAbriviation"
+                            id="couponAbriviation"
+                            placeholder="Введите абривиатуру купона"
+                            value="<%= partner ? partner.couponAbriviation: ""%>">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="topic">Город</label>
+                        <select class="form-control" id="topic" name="topic">
+                            <% for (let city in config.citylist) { %>
+                            <option value="any">Все города</option>
+                            <optgroup label="<%= city %>">
+                                <% config.citylist[city].forEach((ele)=>{ %>
+                                    <option value="<%= ele %>" <%= ele === partner.topic ? "selected": "" %>><%= ele %></option>
+                                <% }) %>
+                            </optgroup>
+                            <% } %>
+                        </select>
+                    </div>
+
+                    <div class="checkbox">
+                        <label>
+                            <input value="1"  type="checkbox" name="active" <%= partner.active ? "checked": "" %>/> Включить/выключить партнера
+                        </label>
+                    </div>
+                </div>
+                <!-- /.box-body -->
+
+                <div class="box-footer">
+                    <button type="submit" class="btn btn-primary">Сохранить</button>
+                </div>
+            </form>
+        </div>
+        <!-- /.box -->
+
+    </div>
+
+
+</div>

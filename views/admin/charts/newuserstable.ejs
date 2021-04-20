@@ -1,0 +1,32 @@
+
+<div class="box">
+    <div class="box-body table-responsive no-padding">
+
+        <table id="list1" class="table table-bordered table-hover dataTable">
+            <thead>
+                <th>Город</th>
+                <% monthes.forEach(function(month){ %>
+                <th><%= month  %></th>
+                <% }) %>
+            </thead>
+            <tbody>
+            <% for (let city in chartDataByCity){ %>
+                <tr>
+                    <td><%= city %></td>
+                    <% monthes.forEach(function(month){ %>
+                        <td><%= chartDataByCity[city][month] %></td>
+                    <% }) %>
+                </tr>
+            <% } %>
+
+            </tbody>
+        </table>
+    </div>
+</div>
+<script>
+    $(function () {
+        $("#list1").DataTable({
+            "pageLength": 15
+        });
+    });
+</script>

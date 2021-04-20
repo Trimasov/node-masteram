@@ -1,0 +1,42 @@
+<div class="row">
+    <div class="col-md-12">
+        <!-- general form elements -->
+        <div class="box box-primary">
+            <!-- form start -->
+            <form role="form" name="sendEmail" method="post" enctype="multipart/form-data">
+                <div class="box-body">
+                    <div class="form-group">
+                        <label for="emailTitle">Загаловок</label>
+                        <input class="form-control" id="emailTitle" name="emailTitle"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="emailText">Текст</label>
+                        <textarea class="form-control" id="emailText" name="emailText"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="topic">Город</label>
+                        <select class="form-control" id="topic" name="topic">
+                            <% for (let city in config.citylist) { %>
+                            <option value="any">Все города</option>
+                            <optgroup label="<%= city %>">
+                                <% config.citylist[city].forEach((ele)=>{ %>
+                                    <option value="<%= ele %>"><%= ele %></option>
+                                <% }) %>
+                            </optgroup>
+                            <% } %>
+                        </select>
+                    </div>
+                </div>
+                <!-- /.box-body -->
+
+                <div class="box-footer">
+                    <button type="submit" class="btn btn-primary">Сохранить</button>
+                </div>
+            </form>
+        </div>
+        <!-- /.box -->
+
+    </div>
+
+
+</div>

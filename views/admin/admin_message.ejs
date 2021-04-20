@@ -1,0 +1,23 @@
+<div class="box">
+    <div class="box-body table-responsive no-padding" style = "padding-left:15px!important">
+<br>
+<form action="/admin/stats?chart=admin_message" method="get">
+  <label>ID админа</label><br>
+  <input type="number" name="id_admin" value = "<%= id_admin %>"/><br>
+  <label>дата от</label><br>
+  <input type="date" name="date_from" value = "<%= date_from %>" /><br>
+  <label>дата до</label><br>
+  <input type="date" name="date_to" value = "<%= date_to %>" /><br><br>
+  <input type="hidden" name ="chart" value="admin_message"/>
+  <input type="submit" value="Отправить" />
+</form>
+<br>
+  <% if (usersData) { %>
+   Количетво сообщений - <%= usersData %>
+  <% } %>
+<% if (!usersData) { %>
+  Нету сообщений за это время
+    <% } %>
+<br><br><br><br>
+    </div>
+</div>

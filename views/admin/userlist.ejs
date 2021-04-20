@@ -1,0 +1,60 @@
+<div class="row">
+    <div class="col-xs-12">
+
+        <div class="box">
+            <div class="box-header">
+                <h3 class="box-title">Пользователи</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+                <table id="example2" class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>Имя</th>
+                            <th>email</th>
+                            <th>Последняя активность</th>
+                            <th>Подписан на город</th>
+                            <th>Контактов</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <% users.forEach((user)=>{ %>
+                        <tr>
+                            <td><%= user.name %></td>
+                            <td><%= user.email %></td>
+                            <td><% let d = new Date(); d.setTime(user.createdAt); %><%= `${d.getHours()}:${d.getMinutes()} ${d.getDate()}.${d.getMonth()}` %></td>
+                            <td><%= user.topic %></td>
+                            <td><%= user.contactsList.length %></td>
+                        </tr>
+                    <%  })%>
+                    </tbody>
+                    <tfoot>
+                    <tr>
+                        <th>Имя</th>
+                        <th>email</th>
+                        <th>Последняя активность</th>
+                        <th>Подписан на город</th>
+                        <th>Контактов</th>
+                    </tr>
+                    </tfoot>
+                </table>
+            </div>
+            <!-- /.box-body -->
+        </div>
+        <!-- /.box -->
+    </div>
+    <!-- /.col -->
+</div>
+<script>
+    $(function () {
+        $('#example2').DataTable({
+            'paging'      : true,
+            'lengthChange': true,
+            'searching'   : true,
+            'ordering'    : true,
+            'info'        : true,
+            'autoWidth'   : false
+        })
+    })
+</script>
+

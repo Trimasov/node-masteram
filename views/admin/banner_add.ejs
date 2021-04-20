@@ -1,0 +1,80 @@
+<div class="row">
+    <div class="col-md-12">
+        <!-- general form elements -->
+        <div class="box box-primary">
+            <!-- form start -->
+            <form role="form" name="saveBanner" method="post" enctype="multipart/form-data">
+                <div class="box-body">
+                    <div class="form-group">
+                        <label for="title">Заголовок</label>
+                        <input type="text" class="form-control" name="title" id="title" placeholder="Введите заголовок" value="<%= banner ? banner.title: ""%>">
+                    </div>
+                    <div class="form-group">
+                        <label for="title">Ссылка</label>
+                        <input type="text" class="form-control" name="link" id="link" placeholder="Введите ссылку" value="<%= banner ? banner.link: ""%>">
+                    </div>
+                    <div class="form-group">
+                        <label for="title">Текст ссылки</label>
+                        <input type="text" class="form-control" name="linkText" id="linkText" placeholder="Введите текст ссылки" value="<%= banner ? banner.linkText: ""%>">
+                    </div>
+                    <div class="form-group">
+                        <label for="title">Номер телефона</label>
+                        <input type="text" class="form-control" name="phoneNumber" id="phoneNumber" placeholder="Введите номер телефона" value="<%= banner ? banner.phoneNumber: ""%>">
+                    </div>
+                    <div class="form-group">
+                        <label for="text">Содержание</label>
+                        <textarea class="form-control" id="text" name="text"><%= banner ? banner.text: ""%></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="topic">Город</label>
+                        <select class="form-control" id="topic" name="topic">
+                            <% let cities = Object.assign({}, config.citylist) %>
+                            <% //cities.push({city: "Нарния", areas: [{name: "Столица Нарнии", user_count: "армия"}]}); %>
+
+                            <% for (let city in cities) { %>
+                            <optgroup label="<%= city %>">
+                                <% cities[city].forEach((ele)=>{ %>
+                                    <option><%= ele %></option>
+                                <% }) %>
+                            </optgroup>
+                            <% } %>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="hours">Часы</label>
+                        <input type="text" class="form-control" id="hours" name="hours" placeholder="Часы формат: 12:00, 13:00, 16:45" value="<%= banner ? banner.hours: ""%>">
+                        <p class="help-block">Часы формат: 12:00, 13:00, 16:45</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="hours">Дни</label>
+                        <input type="text" class="form-control" id="weekDay" name="weekDay" placeholder="Дни формат: 1,3,5" value="<%= banner ? banner.weekDay: ""%>">
+                        <p class="help-block">Дни формат: 1,3,5, что означает понедельник, среда, пятница (перечесление без пробелов)</p>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input value="1"  type="checkbox" name="active" <%= banner.active ? "checked": "" %>/> Включить/выключить баннер
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <% if (banner.image && banner.image.length) { %>
+                        <div style="height: 100px; width: 100px">
+                            <img src="/images/banners/<%= banner.image %>" style="max-height: 100px; max-width: 100px" />
+                        </div>
+                        <% } %>
+                        <label for="image">Картинка</label>
+                        <input type="file" id="image" name="image">
+                    </div>
+                </div>
+                <!-- /.box-body -->
+
+                <div class="box-footer">
+                    <button type="submit" class="btn btn-primary">Сохранить</button>
+                </div>
+            </form>
+        </div>
+        <!-- /.box -->
+
+    </div>
+
+
+</div>

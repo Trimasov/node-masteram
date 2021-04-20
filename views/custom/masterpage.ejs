@@ -1,0 +1,65 @@
+<html>
+<head>
+    <title>Мастер <%= user.name %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script
+            src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <style>
+        .headermessage {
+            margin: 19px;
+            color: black;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .image-block {
+            border: 3px solid white ;
+            background-color: black;
+            padding: 0px;
+            margin: 0px;
+            height:200px;
+            text-align: center;
+            vertical-align: bottom;
+        }
+        .image-block > p {
+            width: 100%;
+            height: 100%;
+            font-weight: normal;
+            font-size: 19px;
+            padding-top: 150px;
+            background-color: rgba(3,3,3,0.0);
+            color: rgba(6,6,6,0.0);
+        }
+        .image-block:hover > p {
+            background-color: rgba(3,3,3,0.5);
+            color: white;
+        }
+    </style>
+</head>
+<body class="container">
+    <div id="card" class="row mt-3">
+        <div id="photo" class="col-sm-6 text-center"><img src="<%= user.avatar %>"></div>
+        <div id="info" class="col-sm-6">
+            <div><%= user.name %> <%= user.surname %></div>
+            <div>Специалист: <%= user.jobTypes.join(", ") %></div>
+            <div>Телефон: <a href="tel:<%= user.phoneNumber %>"><%= user.phoneNumber %></a></div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row text-center">
+            <h3 class="headermessage">Работы мастера</h3>
+        </div>
+        <div class="row">
+            <% for (let index in user.photos){ %>
+            <div class="image-block col-sm-6" style="background: url(<%= user.photos[index].imageUrl %>) no-repeat center top;background-size:contain;">
+                <p></p>
+            </div>
+            <% } %>
+        </div>
+    </div>
+</body>
+</html>

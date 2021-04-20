@@ -1,0 +1,34 @@
+<div class="box">
+    <div class="box-body table-responsive no-padding">
+        <table id="list1" class="table table-bordered table-hover dataTable">
+            <thead>
+
+			<th>User ID</th>
+			<th style="width: 100px;">Имя Фамилия</th>
+            <th>Телефон</th>
+            <th>Дата Блокировки</th>
+            <th>Email</th>
+            </thead>
+            <tbody>
+            <% for (const userData of usersData){ %>
+            <% let d = new Date(); %>
+            <tr>
+
+                <td><%= userData.id %></td>
+                <td><%= `${userData.name} ${userData.surname}` %></td>
+				        <td><span style="color: #460014; font-weight: bold; margin-right: 10px;"><%= userData.phoneNumber %></span></td>
+                <td><% d.setTime(userData.userWaitForUnblock) %><%= `${d.toLocaleDateString()} ${d.toLocaleTimeString()}` %></td>
+				        <td><%= userData.email %><</td>
+            </tr>
+            <% } %>
+            </tbody>
+        </table>
+    </div>
+</div>
+<script>
+    $(function () {
+        $("#list1").DataTable({
+            "pageLength": 15
+        });
+    });
+</script>

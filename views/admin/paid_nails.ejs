@@ -1,0 +1,38 @@
+<div class="box">
+    <div class="box-body table-responsive no-padding">
+        <table id="list1" class="table table-bordered table-hover dataTable">
+            <thead>
+			<th>ID</th>
+			<th>User ID</th>
+			<th style="width: 100px;">Имя Фамилия</th>
+            <th>Телефон</th>
+            <th>Услуги</th>
+            <th>Дата операции</th>
+            <th>Специальности</th>
+            </thead>
+            <tbody>
+            <% for (const payData of chartData){ %>
+            <% let d = new Date(); %>
+            <tr>
+                <td><%= payData.id %></td>
+                <td><%= payData.user.id %></td>
+                <td><%= `${payData.user.name} ${payData.user.surname}` %></td>
+				<td><span style="color: #460014; font-weight: bold; margin-right: 10px;"><%= payData.user.phoneNumber %></span></td>
+				<td>
+					 <%= payData.amount %> / <%= payData.serviceName %>
+				</td>
+                <td><% d.setTime(payData.createdAt) %><%= `${d.toLocaleDateString()} ${d.toLocaleTimeString()}` %></td>
+				<td><%= payData.user.jobTypes %></td>
+            </tr>
+            <% } %>
+            </tbody>
+        </table>
+    </div>
+</div>
+<script>
+    $(function () {
+        $("#list1").DataTable({
+            "pageLength": 15
+        });
+    });
+</script>

@@ -1,0 +1,227 @@
+.menu{
+    display: block;
+    position: absolute;
+    top: 80px;
+    width: 100%;
+    z-index: 200;
+    text-align: center;
+}
+
+.menu ul{
+    list-style: none;
+    color: #fff;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 0 auto;
+}
+
+.menu ul li{
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.menu ul li span, .menu ul li a{
+    color: #ff7300 !important;
+    cursor: pointer;
+}
+
+.menu ul li span{
+    color: #fff !important;
+}
+
+.menu ul li a:hover{
+    text-decoration: underline;
+}
+
+
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 300; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #111; /* Black*/
+    /*overflow-y: hidden; */
+    /* Disable horizontal scroll */
+    display: none;
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+
+.menu_line{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 23px;
+    background: black;
+    z-index: 200;
+}
+
+.menu_line span{
+    /*background: red;*/
+    margin: 1px;
+    background-image: url("/images/landing/menu.png");
+    background-position: center;
+    background-size: cover;
+    width: 21px;
+    height: 21px;
+    display: inline-block;
+    color: #ffffff;
+    font-size: 20px;
+
+}
+
+.t-select{
+    color: #000000;
+    background-color: #ffffff !important;
+    border-radius: 7px !important;
+    -moz-border-radius: 7px !important;
+    -webkit-border-radius: 7px !important;
+}
+
+.t-submit-request{
+    color:#ffffff;
+    background-color:#ff7300 !important;
+    border-radius:15px !important;
+    -moz-border-radius:15px;
+    -webkit-border-radius:15px;
+}
+
+.t-submit:disabled{
+    opacity: 0.5;
+}
+
+.t-input{
+    color:#000000 !important; 
+    background-color:#ffffff !important;
+    border-radius: 7px !important;
+    -moz-border-radius: 7px !important;
+    -webkit-border-radius: 7px !important;
+}
+
+.t-textarea{
+    height: auto !important;
+    resize: none;
+}
+
+.t-checkbox{
+    color:#ffffff !important; 
+    font-size:16px !important;
+    font-weight:600;
+    font-family: 'Roboto',Arial,sans-serif !important;
+}
+
+.master-recomendation{
+    font-size:28px;
+    font-weight:600;
+    font-family: 'Roboto',Arial,sans-serif !important;
+}
+
+.master-recomendation-ad{
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'Roboto',Arial,sans-serif !important;
+    display: block;
+    opacity: 0.60;
+    padding-top: 2px;
+}
+
+.master-recomendation-app{
+    font-size:18px;
+    font-weight:600;
+    font-family: 'Roboto',Arial,sans-serif !important;
+}
+
+.master-item{
+    display: block;
+    margin-bottom: 8px;
+    padding: 8px;
+    font-family: 'Roboto',Arial,sans-serif !important;
+    background-color: rgba(145, 164, 189, 0.75);
+    border-radius: 7px !important;
+    -moz-border-radius: 7px !important;
+    -webkit-border-radius: 7px !important;
+}
+
+.master-item .photo{
+    display: inline-block;
+    width: 20%;
+    vertical-align: top; 
+}
+
+.master-item .info{
+    display: inline-block;
+    width: 79%;
+    text-align: left;
+    margin-left: 8px;
+    margin-right: -8px;
+}
+
+.master-item .info span.name{
+    font-size:18px;
+    font-weight:600;
+}
+
+.master-item .info a.phone{
+    font-weight:600;
+}
+
+.master-item .info span, .master-item .info a{
+    display: block;
+    margin-bottom: 8px;
+}
+
+@media (max-width: 570px) {
+    .master-item {
+        text-align: center;
+    }
+
+    .master-item .photo{
+        min-width: 120px;
+        margin-bottom: 8px;
+    }
+
+    .master-item .info{
+        text-align: center;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+}

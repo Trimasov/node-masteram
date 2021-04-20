@@ -1,0 +1,2794 @@
+<html lang="en">
+<script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KCKQFT"></script>
+<script type="text/javascript"
+        src="chrome-extension://kajfghlhfkcocafkcjlajldicbikpgnp/catcher.js"><!-- script injected by Request Maker --></script>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="cmodelID" content="4579019-ce733dfa-fc77-8c1d-6fd4-b2d88cee81a5">
+
+    <meta name="description"
+          content="The Postman Documenter generates and maintains beautiful, live documentation for your collections. Never worry about maintaining API documentation again.">
+    <meta name="generator" content="Postman Documenter">
+    <title>masteram external</title>
+
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-KCKQFT');</script>
+    <!-- End Google Tag Manager -->
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300,700,800" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css"
+          href="https://documenter.getpostman.com/docs-assets/styles/production.min.css">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+
+    <script src="/docs-assets/js/messenger-setup.js"></script>
+    <meta property="og:title" content="masteram external">
+    <meta property="og:description"
+          content="The Postman Documenter generates and maintains beautiful, live documentation for your collections. Never worry about maintaining API documentation again.">
+    <meta property="og:site_name" content="masteram external">
+    <meta property="og:url" content="documenter.getpostman.com">
+    <meta property="og:image" content="https://documenter.getpostman.com/docs-assets/images/logo-glyph.png">
+
+
+    <meta name="twitter:title" value="masteram external">
+    <meta name="twitter:description"
+          value="The Postman Documenter generates and maintains beautiful, live documentation for your collections. Never worry about maintaining API documentation again.">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:domain" value="documenter.getpostman.com">
+    <meta name="twitter:image" content="https://documenter.getpostman.com/docs-assets/images/logo-glyph.png">
+    <meta name="twitter:label1" value="Last Update">
+    <meta name="twitter:data1" value="">
+</head>
+
+<body cz-shortcut-listen="true">
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KCKQFT"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="layout">
+    <div class="top-bar">
+        <div id="menu-toggle" class="visible-xs visible-sm"></div>
+
+        <a target="_blank" href="https://www.getpostman.com">
+            <div class="postman-logo"></div>
+        </a>
+
+        <div class="top-bar-right">
+            <div class="hidden-xs hidden-sm publish-doc">
+                <a class="btn btn-default publish-button" id="initiate_publish_button" href="/collection/publish"
+                   target="_blank">Publish</a>
+            </div>
+
+            <div class="environment-dropdown dropdown hidden-xs">
+                <button class="btn btn-default hard--sides disabled" type="button">
+                    <div class="dropdown-button ellipsis active-environment" data-environment-id="0">No environment
+                    </div>
+                </button>
+            </div>
+
+
+            <button type="button" class="btn pm-btn pm-btn-secondary settings-toggle visible-xs">
+                <span class="icon settings-icon"></span>
+            </button>
+        </div>
+    </div>
+
+    <div class="modal" id="rawBodyModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <button type="button" class="close btn-circle" data-dismiss="modal" aria-label="Close">
+            <div>
+                <span aria-hidden="true">×</span>
+            </div>
+        </button>
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="snippetModal" tabindex="-1" role="dialog" aria-labelledby="documentation-response-modal">
+        <button type="button" class="close btn-circle" data-dismiss="modal" aria-label="Close">
+            <div>
+                <span aria-hidden="true">×</span>
+            </div>
+        </button>
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <pre><code></code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid no-gutter">
+        <div class="row no-gutter">
+            <div class="col-xs-12 info no-gutter">
+                <div class="pm-persistent-notification-container">
+                    <div id="mid_1531390879421_40">
+                        <div class="pm-global-notification pm-global-notify pm-message-persistent">One-click live docs
+                            for your teams collections <a href="https://www.getpostman.com/pricing#pro-free-trial-7"
+                                                          target="_blank" class="gtm-start-trial">Try for 7 days and
+                                share with your team</a>
+                            <div class="pm-global-notification-close">×</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pm-global-notification-container"></div>
+                <div id="mobile-controls">
+                    <label>User</label>
+                    <div class="btn-group">
+                        <button type="button" class="btn pm-btn pm-btn-secondary dropdown-toggle" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                            <span class="pm-doc-sprite pm-doc-sprite-dropdown-caret"></span>
+                        </button>
+                        <ul class="dropdown-menu pull-right">
+                            <li class="dropdown-menu-item"><a href="https://app.getpostman.com/dashboard/edit"
+                                                              target="_blank">Edit Profile</a></li>
+                            <li class="dropdown-menu-item"><a href="https://app.getpostman.com/dashboard/team-plans"
+                                                              target="_blank">Plans &amp; Upgrades</a></li>
+                            <li class="dropdown-menu-item"><a href="https://app.getpostman.com/pay/billing"
+                                                              target="_blank">Billing</a></li>
+                            <li class="dropdown-menu-item"><a href="https://identity.getpostman.com/accounts">Switch
+                                    User</a></li>
+                            <li class="dropdown-menu-item"><a href="https://app.getpostman.com/web-signout">Sign Out</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <label>Environment</label>
+                    <div class="environment-dropdown dropdown">
+                        <button class="btn pm-btn pm-btn-secondary hard--sides disabled" type="button">
+                            <div class="dropdown-button ellipsis active-environment" data-environment-id="0">No
+                                environment
+                            </div>
+                        </button>
+                    </div>
+
+                </div>
+
+
+                <div id="doc-body" class="">
+                    <div class="row row-no-padding row-eq-height" id="intro">
+                        <div class="col-md-6 col-xs-12 section">
+                            <div class="api-information">
+                                <div class="collection-name">
+                                    <p>masteram external</p>
+                                </div>
+                                <div class="collection-description"></div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="row row-no-padding row-eq-height" id="08f4e83b-fffe-ad61-5eac-9e392d8d6255">
+                        <div class="col-md-6 col-xs-12 section">
+                            <div class="api-information">
+                                <div class="heading">
+                                    <div class="name">
+                                        <span class="POST method">POST</span>
+                                        /user/ping
+                                    </div>
+                                </div>
+                                <div class="url">http://78.24.223.159:1337/user/ping</div>
+                                <div class="description"></div>
+
+
+                            </div>
+                            <br><br>
+                        </div>
+
+
+                        <div class="col-md-6 col-xs-12 examples">
+                            <div class="sample-request">
+                                <div class="heading"><span>Example Request</span></div>
+
+                                <div class="responses-index">
+                                    <div class="response-name"><span>/user/ping</span></div>
+                                </div>
+                            </div>
+
+                            <div class="request code-snippet">
+                                <div class="formatted-requests is-default" data-lang="cURL"
+                                     data-id="08f4e83b-fffe-ad61-5eac-9e392d8d6255_0">
+            <pre class="click-to-expand-wrapper is-snippet-wrapper language-javascript"><button
+                    class="btn btn-sm pull-right copy-request copy-request-modal"
+                    data-clipboard-target="#cURL_0_08f4e83b-fffe-ad61-5eac-9e392d8d6255"
+                    data-before-copy="Copy to Clipboard" data-after-copy="Copied"></button><code
+                    class=" is-highlighted language-javascript"
+                    id="cURL_0_08f4e83b-fffe-ad61-5eac-9e392d8d6255">curl <span class="token operator">--</span>request POST \
+  <span class="token operator">--</span>url http<span class="token punctuation">:</span><span
+                        class="token operator">/</span><span class="token operator">/</span><span class="token number">78.24</span><span
+                        class="token punctuation">.</span><span class="token number">223.159</span><span
+                        class="token punctuation">:</span><span class="token number">1337</span><span
+                        class="token operator">/</span>user<span class="token operator">/</span>ping</code></pre>
+                                    <!-- Button over the expand overlay -->
+                                    <button class="btn btn-sm pull-right copy-request"
+                                            data-clipboard-target="#cURL_0_08f4e83b-fffe-ad61-5eac-9e392d8d6255"
+                                            data-before-copy="Copy to Clipboard" data-after-copy="Copied"></button>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="row row-no-padding row-eq-height" id="uploadAvatar">
+                        <div class="col-md-6 col-xs-12 section">
+                            <div class="api-information">
+                                <div class="heading">
+                                    <div class="name">
+                                        <span class="POST method">POST</span>
+                                        /user/uploadAvatar
+                                    </div>
+                                </div>
+                                <div class="url">http://78.24.223.159:1337/user/uploadAvatar</div>
+                                <div class="description"><p>Загрузка аватарки
+                                        Поля обязательные:<br/>
+                                        userId: айди пользователя который загружает фотку<br/>
+                                        token: токен пользователя<br/>
+                                        avatar: file<br/>
+                                    </p>
+                                    В загаловках нужно указать
+                                    enctype="multipart/form-data"<br/>
+                                    Максимальный размер 10МБ<br/>
+
+                                    После загрузки картинки становятся доступны по адрессам<br/>
+                                    Оригинал:<br/>
+                                    http://78.24.223.159:1337/images/avatars/avatar{ID пользователя}.{расширение которое было использованно}<br/>
+                                    Мини версия в пределах 100 на 100:<br/>
+                                    http://78.24.223.159:1337/images/avatars/thumb/avatar{ID пользователя}.{расширение которое было использованно}<br/>
+                                    <br/>
+                                    Возможные ошибки<br/>
+                                    {"status": "image_error"} - не удалось сохранить, или нету картинки<br/>
+                                    {"status": "db_error"} - не получилось сохранить пользователю<br/>
+                                </div>
+
+
+                            </div>
+                            <br><br>
+                        </div>
+                    </div>
+                    <div class="row row-no-padding row-eq-height" id="removeAvatar">
+                        <div class="col-md-6 col-xs-12 section">
+                            <div class="api-information">
+                                <div class="heading">
+                                    <div class="name">
+                                        <span class="POST method">POST</span>
+                                        /user/removeAvatar
+                                    </div>
+                                </div>
+                                <div class="url">http://78.24.223.159:1337/user/removeAvatar</div>
+                                <div class="description"><p>Загрузка аватарки
+                                        Поля обязательные:<br/>
+                                        userId: айди пользователя который удаляет фотку<br/>
+                                        token: токен пользователя<br/>
+                                    </p>
+                                    {status: "ok"} - Ответ при успехе
+                                    <br/>
+                                    Возможные ошибки<br/>
+                                    {"status": "db_error"} - не получилось сохранить пользователю<br/>
+                                </div>
+
+
+                            </div>
+                            <br><br>
+                        </div>
+
+
+                        <div class="col-md-6 col-xs-12 examples">
+                            <div class="sample-request">
+                                <div class="heading"><span>Example Request</span></div>
+
+                                <div class="responses-index">
+                                    <div class="response-name"><span>/user/uploadAvatar</span></div>
+                                </div>
+                            </div>
+
+                            <div class="request code-snippet">
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="row row-no-padding row-eq-height" id="uploadToAlbum">
+                        <div class="col-md-6 col-xs-12 section">
+                            <div class="api-information">
+                                <div class="heading">
+                                    <div class="name">
+                                        <span class="POST method">POST</span>
+                                        /user/uploadToAlbum
+                                    </div>
+                                </div>
+                                <div class="url">http://78.24.223.159:1337/user/uploadToAlbum</div>
+                                <div class="description"><p>Загрузка фотографии в альбом
+                                        Поля обязательные:<br/>
+                                        userId: айди пользователя который загружает фотку<br/>
+                                        token: токен пользователя<br/>
+                                        photo: file<br/>
+                                    </p>
+                                    В загаловках нужно указать
+                                    enctype="multipart/form-data"<br/>
+                                    Максимальный размер 10МБ<br/>
+
+                                    Максимум 5 фотографий, если загружается больше в ответ будет<br/>
+                                    {status: "count_error"}<br/><br/>
+
+                                    Если всё хорошо ответ будет содержать, массив с полным списком фотографий,
+                                    и отдельно саму зашруженную фотографию в формате<br/>
+                                    {imageUrl: "url", imageThumbUrl: "url"}
+                                    <br/>
+                                    {status: "ok", photo: photo, photos: user.photos}
+
+                                    <br/>Пример:
+                                    <code><pre>
+    {
+        "status": "ok",
+        "photo": {
+        "imageUrl": "/images/albums/1/1532003271635_1.jpg",
+        "imageThumbUrl": "/images/albums/1/thumb/1532003271635_1.jpg"
+        },
+        "photos": [
+            {
+                "imageUrl": "/images/albums/1/1532001887327_1.jpg",
+                "imageThumbUrl": "/images/albums/1/thumb/1532001887327_1.jpg"
+            },
+            {
+                "imageUrl": "/images/albums/1/1532001887748_1.jpg",
+                "imageThumbUrl": "/images/albums/1/thumb/1532001887748_1.jpg"
+            },
+            {
+                "imageUrl": "/images/albums/1/1532001888283_1.jpg",
+                "imageThumbUrl": "/images/albums/1/thumb/1532001888283_1.jpg"
+            },
+            {
+                "imageUrl": "/images/albums/1/1532003262905_1.jpg",
+                "imageThumbUrl": "/images/albums/1/thumb/1532003262905_1.jpg"
+            },
+            {
+                "imageUrl": "/images/albums/1/1532003271635_1.jpg",
+                "imageThumbUrl": "/images/albums/1/thumb/1532003271635_1.jpg"
+            }
+        ]
+    }
+                                    </pre></code>
+
+                                    <br/>
+                                    Возможные ошибки<br/>
+                                    {"status": "image_error"} - не удалось сохранить, или нету картинки<br/>
+                                    {"status": "db_error"} - не получилось сохранить пользователю<br/>
+                                </div>
+
+
+                            </div>
+                            <br><br>
+                        </div>
+                    </div>
+
+
+                    <div class="row row-no-padding row-eq-height" id="removeFromAlbum">
+                        <div class="col-md-6 col-xs-12 section">
+                            <div class="api-information">
+                                <div class="heading">
+                                    <div class="name">
+                                        <span class="POST method">POST</span>
+                                        /user/removeFromAlbum
+                                    </div>
+                                </div>
+                                <div class="url">http://78.24.223.159:1337/user/removeFromAlbum</div>
+                                <div class="description"><p>Удаление фото из альбома
+                                        Поля обязательные:<br/>
+                                        userId: айди пользователя который удаляет фотку<br/>
+                                        token: токен пользователя<br/>
+                                        photo: путь фотографии
+                                    </p>
+                                    {status: "ok", photos: "текущий масив фотографий"} - Ответ при успехе
+                                    <br/>
+                                    Пример ответа:
+                                    <code><pre>
+{
+    "status": "ok",
+    "photos": [
+        {
+            "imageUrl": "/images/albums/1/1532001887327_1.jpg",
+            "imageThumbUrl": "/images/albums/1/thumb/1532001887327_1.jpg"
+        },
+        {
+            "imageUrl": "/images/albums/1/1532001887748_1.jpg",
+            "imageThumbUrl": "/images/albums/1/thumb/1532001887748_1.jpg"
+        },
+        {
+            "imageUrl": "/images/albums/1/1532003262905_1.jpg",
+            "imageThumbUrl": "/images/albums/1/thumb/1532003262905_1.jpg"
+        },
+        {
+            "imageUrl": "/images/albums/1/1532003271635_1.jpg",
+            "imageThumbUrl": "/images/albums/1/thumb/1532003271635_1.jpg"
+        }
+    ]
+}
+                                    </pre></code>
+                                    <br/>
+
+                                    Возможные ошибки<br/>
+                                    {status: "imageNotFound_error"} - фотография не найдена<br/>
+                                    {"status": "db_error"} - не получилось сохранить пользователю<br/>
+                                </div>
+
+
+                            </div>
+                            <br><br>
+                        </div>
+
+
+                        <div class="col-md-6 col-xs-12 examples">
+                            <div class="sample-request">
+                                <div class="heading"><span>Example Request</span></div>
+
+                                <div class="responses-index">
+                                    <div class="response-name"><span>/user/removeFromAlbum</span></div>
+                                </div>
+                            </div>
+
+                            <div class="request code-snippet">
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="row row-no-padding row-eq-height" id="0e8c0d06-d519-d691-366b-df7c4daed4ec">
+                        <div class="col-md-6 col-xs-12 section">
+                            <div class="api-information">
+                                <div class="heading">
+                                    <div class="name">
+                                        <span class="POST method">POST</span>
+                                        /user/updateProfile
+                                    </div>
+                                </div>
+                                <div class="url">http://78.24.223.159:1337/user/updateProfile</div>
+                                <div class="description"><p>Апдейт профиля пользователя.
+                                        Поля обязательные:
+                                        userId: айди пользователя который нужуно поменять
+                                        token: токен пользователя</p>
+                                    <p>Поля которые можно поменять
+                                        name:
+                                        surname: string
+                                        nick: string
+                                        topic: string , город чат которого используется как основной чат
+                                        description: string
+                                        phoneNumber: string
+                                        jobTypes: string , (перечисление выбранных професий, через запятую)</p>
+                                </div>
+
+
+                                <div class="request-body">
+                                    <div class="body-heading">BODY</div>
+
+                                    <hr>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">userId</div>
+                                        <div class="value col-md-9 col-xs-12">1</div>
+                                        <div class="description col-md-9 col-xs-12"><p>ID пользователя текущего
+                                                пользователя</p>
+                                        </div>
+                                    </div>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">email</div>
+                                        <div class="value col-md-9 col-xs-12">asd@aabc.com</div>
+                                        <div class="description col-md-9 col-xs-12"><p>Емайл</p>
+                                        </div>
+                                    </div>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">name</div>
+                                        <div class="value col-md-9 col-xs-12">Алексей</div>
+                                        <div class="description col-md-9 col-xs-12"><p>Имя (обязательное)</p>
+                                        </div>
+                                    </div>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">surname</div>
+                                        <div class="value col-md-9 col-xs-12">Мидведин</div>
+                                        <div class="description col-md-9 col-xs-12"><p>Фамилия (обязательное)</p>
+                                        </div>
+                                    </div>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">nick</div>
+                                        <div class="value col-md-9 col-xs-12">НуженЛиОн</div>
+                                        <div class="description col-md-9 col-xs-12"><p>Ник</p>
+                                        </div>
+                                    </div>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">token</div>
+                                        <div class="value col-md-9 col-xs-12">
+                                            uSJynr0URTzHxdU4lghNv73MTBichM5qM4SSWLJqTVUaHewGRVmH-APY39g-7aFC
+                                        </div>
+                                        <div class="description col-md-9 col-xs-12"><p>Token текущего пользователя</p>
+                                        </div>
+                                    </div>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">jobTypes</div>
+                                        <div class="value col-md-9 col-xs-12">betonshhik, burilshhik, perevozchik</div>
+                                        <div class="description col-md-9 col-xs-12"><p>Список професий</p>
+                                        </div>
+                                    </div>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">topic</div>
+                                        <div class="value col-md-9 col-xs-12">Сочи</div>
+                                        <div class="description col-md-9 col-xs-12"><p>Город на общий чат которого
+                                                подписан пользователь (обязательное)</p>
+                                        </div>
+                                    </div>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">description</div>
+                                        <div class="value col-md-9 col-xs-12">Я отличный специалист в укладке бетона
+                                        </div>
+                                        <div class="description col-md-9 col-xs-12"><p>Описание </p>
+                                        </div>
+                                    </div>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">phoneNumber</div>
+                                        <div class="value col-md-9 col-xs-12">+79189174646</div>
+                                        <div class="description col-md-9 col-xs-12"><p>Номер телефона (обязательное)</p>
+                                        </div>
+                                    </div>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">userType</div>
+                                        <div class="value col-md-9 col-xs-12">master</div>
+                                        <div class="description col-md-9 col-xs-12"><p>Тип пользователя, возможные значения ["master", "client", "admin", "moderator"],
+                                                для внешнего использования допускается использовать только "master", "client"</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <br><br>
+                        </div>
+
+
+                        <div class="col-md-6 col-xs-12 examples">
+                            <div class="sample-request">
+                                <div class="heading"><span>Example Request</span></div>
+
+                                <div class="responses-index">
+                                    <div class="response-name"><span>/user/updateProfile</span></div>
+                                </div>
+                            </div>
+
+                            <div class="request code-snippet">
+                                <div class="formatted-requests is-default" data-lang="cURL"
+                                     data-id="0e8c0d06-d519-d691-366b-df7c4daed4ec_0">
+            <pre class="click-to-expand-wrapper is-snippet-wrapper language-javascript"><button
+                    class="btn btn-sm pull-right copy-request copy-request-modal"
+                    data-clipboard-target="#cURL_0_0e8c0d06-d519-d691-366b-df7c4daed4ec"
+                    data-before-copy="Copy to Clipboard" data-after-copy="Copied"></button><code
+                    class=" is-highlighted language-javascript"
+                    id="cURL_0_0e8c0d06-d519-d691-366b-df7c4daed4ec">curl <span class="token operator">--</span>request POST \
+  <span class="token operator">--</span>url http<span class="token punctuation">:</span><span
+                        class="token operator">/</span><span class="token operator">/</span><span class="token number">78.24</span><span
+                        class="token punctuation">.</span><span class="token number">223.159</span><span
+                        class="token punctuation">:</span><span class="token number">1337</span><span
+                        class="token operator">/</span>user<span class="token operator">/</span>updateProfile \
+  <span class="token operator">--</span>data <span class="token string">'userId=1&amp;email=asd%40aabc.com&amp;name=%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B5%D0%B9&amp;surname=%D0%9C%D0%B8%D0%B4%D0%B2%D0%B5%D0%B4%D0%B8%D0%BD&amp;nick=%D0%9D%D1%83%D0%B6%D0%B5%D0%BD%D0%9B%D0%B8%D0%9E%D0%BD&amp;token=uSJynr0URTzHxdU4lghNv73MTBichM5qM4SSWLJqTVUaHewGRVmH-APY39g-7aFC&amp;jobTypes=betonshhik%2C%20%20burilshhik%2C%20perevozchik&amp;topic=%D0%A1%D0%BE%D1%87%D0%B8&amp;description=%D0%AF%20%D0%BE%D1%82%D0%BB%D0%B8%D1%87%D0%BD%D1%8B%D0%B9%20%D1%81%D0%BF%D0%B5%D1%86%D0%B8%D0%B0%D0%BB%D0%B8%D1%81%D1%82%20%D0%B2%20%D1%83%D0%BA%D0%BB%D0%B0%D0%B4%D0%BA%D0%B5%20%D0%B1%D0%B5%D1%82%D0%BE%D0%BD%D0%B0&amp;phone=%2B79189174646'</span></code></pre>
+                                    <!-- Button over the expand overlay -->
+                                    <button class="btn btn-sm pull-right copy-request"
+                                            data-clipboard-target="#cURL_0_0e8c0d06-d519-d691-366b-df7c4daed4ec"
+                                            data-before-copy="Copy to Clipboard" data-after-copy="Copied"></button>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="row row-no-padding row-eq-height" id="f40ea07d-282f-1ca0-23e4-1fe1907844b0">
+                        <div class="col-md-6 col-xs-12 section">
+                            <div class="api-information">
+                                <div class="heading">
+                                    <div class="name">
+                                        <span class="POST method">POST</span>
+                                        /user/setFCMToken
+                                    </div>
+                                </div>
+                                <div class="url">http://78.24.223.159:1337/user/setFCMToken</div>
+                                <div class="description"><p>Желательно после авторизации сохранить токен firebase
+                                        Поля</p>
+                                    <p>userId - айди пользователя</p>
+                                    <p>token - токен пользователя</p>
+                                    <p>firebaseToken - токе фаербейс</p>
+                                </div>
+
+                                <div class="headers">
+                                    <div class="heading">HEADERS</div>
+                                    <hr>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">Content-Type</div>
+                                        <div class="value col-md-9 col-xs-12">application/x-www-form-urlencoded</div>
+                                    </div>
+                                </div>
+
+
+                                <div class="request-body">
+                                    <div class="body-heading">BODY</div>
+
+                                    <hr>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">userId</div>
+                                        <div class="value col-md-9 col-xs-12">1</div>
+                                    </div>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">firebaseToken</div>
+                                        <div class="value col-md-9 col-xs-12">
+                                            fkdu_Cu-arg:APA91bEF-YrHhyInG_xTGvgV_6iK3Vr5a5DLa-JMlCPH7DrQb5HWT08Ox2JCy1GCBtk3Jyo5-_40zaRdp6aJhmrJ6qMgZx1d5kdJ1qsyXMCC564OaoPtsQi4JCWcr0QcJaE7K1jWqDhl3VjqNrlaiX4PMtvbMtgZDQ
+                                        </div>
+                                    </div>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">token</div>
+                                        <div class="value col-md-9 col-xs-12">
+                                            uSJynr0URTzHxdU4lghNv73MTBichM5qM4SSWLJqTVUaHewGRVmH-APY39g-7aFC
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <br><br>
+                        </div>
+
+
+                        <div class="col-md-6 col-xs-12 examples">
+                            <div class="sample-request">
+                                <div class="heading"><span>Example Request</span></div>
+
+                                <div class="responses-index">
+                                    <div class="response-name"><span>/user/setFCMToken</span></div>
+                                </div>
+                            </div>
+
+                            <div class="request code-snippet">
+                                <div class="formatted-requests is-default" data-lang="cURL"
+                                     data-id="f40ea07d-282f-1ca0-23e4-1fe1907844b0_0">
+            <pre class="click-to-expand-wrapper is-snippet-wrapper"><button
+                    class="btn btn-sm pull-right copy-request copy-request-modal"
+                    data-clipboard-target="#cURL_0_f40ea07d-282f-1ca0-23e4-1fe1907844b0"
+                    data-before-copy="Copy to Clipboard" data-after-copy="Copied"></button><code
+                    class="language-javascript" id="cURL_0_f40ea07d-282f-1ca0-23e4-1fe1907844b0">curl --request POST \
+  --url http://78.24.223.159:1337/user/setFCMToken \
+  --header 'Content-Type: application/x-www-form-urlencoded' \
+  --data 'userId=1&amp;firebaseToken=fkdu_Cu-arg%3AAPA91bEF-YrHhyInG_xTGvgV_6iK3Vr5a5DLa-JMlCPH7DrQb5HWT08Ox2JCy1GCBtk3Jyo5-_40zaRdp6aJhmrJ6qMgZx1d5kdJ1qsyXMCC564OaoPtsQi4JCWcr0QcJaE7K1jWqDhl3VjqNrlaiX4PMtvbMtgZDQ&amp;token=uSJynr0URTzHxdU4lghNv73MTBichM5qM4SSWLJqTVUaHewGRVmH-APY39g-7aFC'</code></pre>
+                                    <!-- Button over the expand overlay -->
+                                    <button class="btn btn-sm pull-right copy-request"
+                                            data-clipboard-target="#cURL_0_f40ea07d-282f-1ca0-23e4-1fe1907844b0"
+                                            data-before-copy="Copy to Clipboard" data-after-copy="Copied"></button>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="row row-no-padding row-eq-height" id="5d4f471e-99fd-1a0e-6e95-29e4ba05eab6">
+                        <div class="col-md-6 col-xs-12 section">
+                            <div class="api-information">
+                                <div class="heading">
+                                    <div class="name">
+                                        <span class="POST method">POST</span>
+                                        /user/getUserData
+                                    </div>
+                                </div>
+                                <div class="url">http://78.24.223.159:1337/user/getUserData</div>
+                                <div class="description"><p>Получение данных по пользователю в ответ будет объект
+                                        пользователь</p>
+                                    <p>Например
+                                        {
+                                        "createdAt": 1531246290190,
+                                        "updatedAt": 1531246290190,
+                                        "id": 2,
+                                        "userId": 0,
+                                        "email": "bbb@bbbb.com",
+                                        "name": "Коля",
+                                        "surname": "Мастер2",
+                                        "nick": "",
+                                        "description": "",
+                                        "topic": "Сочи",
+                                        "privateChats": "",
+                                        "phoneNumber": "",
+                                        "isAdmin": false,
+                                        "photos": null,
+                                        "lastActivity": null,
+                                        "jobTypes": null,
+                                        "blockedContacts": null,
+                                        "gAuthSub": null,
+                                        "jobExpirience": null,
+                                        "pro": false,
+                                        "userStatus": 1,
+                                        "userWaitForUnblock": 0,
+                                        "userKarma": 2
+                                        }</p>
+                                </div>
+
+
+                                <div class="request-body">
+                                    <div class="body-heading">BODY</div>
+                                    <hr>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">token</div>
+                                        <div class="value col-md-9 col-xs-12">
+                                            uSJynr0URTzHxdU4lghNv73MTBichM5qM4SSWLJqTVUaHewGRVmH-APY39g-7aFC
+                                        </div>
+                                        <div class="description col-md-9 col-xs-12"><p>Токен пользователя
+                                                (обязательное)</p>
+                                        </div>
+                                    </div>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">userId</div>
+                                        <div class="value col-md-9 col-xs-12">1</div>
+                                        <div class="description col-md-9 col-xs-12"><p>ID пользователя
+                                                (обязательное)</p>
+                                        </div>
+                                    </div>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">requestUserId</div>
+                                        <div class="value col-md-9 col-xs-12">2</div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <br><br>
+                        </div>
+
+
+                        <div class="col-md-6 col-xs-12 examples">
+                            <div class="sample-request">
+                                <div class="heading"><span>Example Request</span></div>
+
+                                <div class="responses-index">
+                                    <div class="response-name"><span>/user/getUserData</span></div>
+                                </div>
+                            </div>
+
+                            <div class="request code-snippet">
+                                <div class="formatted-requests is-default" data-lang="cURL"
+                                     data-id="5d4f471e-99fd-1a0e-6e95-29e4ba05eab6_0">
+            <pre class="click-to-expand-wrapper is-snippet-wrapper"><button
+                    class="btn btn-sm pull-right copy-request copy-request-modal"
+                    data-clipboard-target="#cURL_0_5d4f471e-99fd-1a0e-6e95-29e4ba05eab6"
+                    data-before-copy="Copy to Clipboard" data-after-copy="Copied"></button><code
+                    class="language-javascript" id="cURL_0_5d4f471e-99fd-1a0e-6e95-29e4ba05eab6">curl --request POST \
+  --url http://78.24.223.159:1337/user/getUserData \
+  --header 'content-type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW' \
+  --form token=uSJynr0URTzHxdU4lghNv73MTBichM5qM4SSWLJqTVUaHewGRVmH-APY39g-7aFC \
+  --form userId=1 \
+  --form requestUserId=2</code></pre>
+                                    <!-- Button over the expand overlay -->
+                                    <button class="btn btn-sm pull-right copy-request"
+                                            data-clipboard-target="#cURL_0_5d4f471e-99fd-1a0e-6e95-29e4ba05eab6"
+                                            data-before-copy="Copy to Clipboard" data-after-copy="Copied"></button>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="row row-no-padding row-eq-height" id="9883452b-6f96-49b0-3d40-3f9654b3a609">
+                        <div class="col-md-6 col-xs-12 section">
+                            <div class="api-information">
+                                <div class="heading">
+                                    <div class="name">
+                                        <span class="POST method">POST</span>
+                                        /user/blockUser
+                                    </div>
+                                </div>
+                                <div class="url">http://78.24.223.159:1337/user/blockUser</div>
+                                <div class="description"></div>
+
+                                <div class="headers">
+                                    <div class="heading">HEADERS</div>
+                                    <hr>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">Content-Type</div>
+                                        <div class="value col-md-9 col-xs-12">application/x-www-form-urlencoded</div>
+                                    </div>
+                                </div>
+
+
+                                <div class="request-body">
+                                    <div class="body-heading">BODY</div>
+
+                                    <hr>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">token</div>
+                                        <div class="value col-md-9 col-xs-12">123</div>
+                                    </div>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">userId</div>
+                                        <div class="value col-md-9 col-xs-12">1</div>
+                                    </div>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">userToBlock</div>
+                                        <div class="value col-md-9 col-xs-12">2</div>
+                                    </div>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">userWaitForUnblock</div>
+                                        <div class="value col-md-9 col-xs-12">10000</div>
+                                    </div>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">statusToSet</div>
+                                        <div class="value col-md-9 col-xs-12">2</div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <br><br>
+                        </div>
+
+
+                        <div class="col-md-6 col-xs-12 examples">
+                            <div class="sample-request">
+                                <div class="heading"><span>Example Request</span></div>
+
+                                <div class="responses-index">
+                                    <div class="response-name"><span>/user/blockUser</span></div>
+                                </div>
+                            </div>
+
+                            <div class="request code-snippet">
+                                <div class="formatted-requests is-default" data-lang="cURL"
+                                     data-id="9883452b-6f96-49b0-3d40-3f9654b3a609_0">
+            <pre class="click-to-expand-wrapper is-snippet-wrapper"><button
+                    class="btn btn-sm pull-right copy-request copy-request-modal"
+                    data-clipboard-target="#cURL_0_9883452b-6f96-49b0-3d40-3f9654b3a609"
+                    data-before-copy="Copy to Clipboard" data-after-copy="Copied"></button><code
+                    class="language-javascript" id="cURL_0_9883452b-6f96-49b0-3d40-3f9654b3a609">curl --request POST \
+  --url http://78.24.223.159:1337/user/blockUser \
+  --header 'Content-Type: application/x-www-form-urlencoded' \
+  --data 'token=123&amp;userId=1&amp;userToBlock=2&amp;userWaitForUnblock=10000&amp;statusToSet=2'</code></pre>
+                                    <!-- Button over the expand overlay -->
+                                    <button class="btn btn-sm pull-right copy-request"
+                                            data-clipboard-target="#cURL_0_9883452b-6f96-49b0-3d40-3f9654b3a609"
+                                            data-before-copy="Copy to Clipboard" data-after-copy="Copied"></button>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="row row-no-padding row-eq-height" id="a4c0189f-800f-a64a-cde2-e651b24c4691">
+                        <div class="col-md-6 col-xs-12 section">
+                            <div class="api-information">
+                                <div class="heading">
+                                    <div class="name">
+                                        <span class="POST method">POST</span>
+                                        /user/sendMessage
+                                    </div>
+                                </div>
+                                <div class="url">http://78.24.223.159:1337/user/sendMessage</div>
+                                <div class="de  vscription">
+                                    <div>Ответ на сообщение, заполняется поле answer. В ответ придёт само сообщение, плюс вложенный обьект в поле answer
+                                        с сообщение на которое отвечают и пользователем
+                                    </div>
+                                    <br/>
+                                    <div>Загрузка картинок и звука: соответсвенно в поле messageType указывается sound или image, в ответ придёт
+                                        объект сообщения с заполненым полем sound или image соответственно
+                                        <br/>
+                                        В заголовке нужно будет указать: enctype="multipart/form-data"
+                                        <br/>
+                                        Пример поля image в ответе
+<pre>
+"image": {
+        "imageUrl": "/images/chat_uploads/1533556480381_1.jpg",
+        "imageThumbUrl": "/images/chat_uploads/thumb/1533556480381_1.jpg"
+    }
+</pre>
+                                        Пример поля sound в ответе
+<pre>
+"sound": {
+    "soundUrl": "/images/chat_uploads/1533552058747_1.jpg"
+},
+</pre>
+                                    </div>
+
+
+                                    <br/>
+                                    <div>
+                                        Если пользователь заблокирован в чате, то в ответ придёт такое, с временем до снятие блокировки в милисекундах
+                                        <pre>
+{
+    "status": "error",
+    "description": "user_blocked",
+    "timeLeft": 82239237
+}
+                                        </pre>
+
+                                        <pre>
+Для частных чатов топик формирутеся следующим образом, айдиНаименьшое_айдиБольшое (`${a < b ? a : b}_${a < b ? b : a}` вариант на яваскрипте)
+                                        </pre>
+                                    </div>
+                                </div>
+
+                                <div class="headers">
+                                    <div class="heading">HEADERS</div>
+                                    <hr>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">Content-Type</div>
+                                        <div class="value col-md-9 col-xs-12">application/x-www-form-urlencoded</div>
+                                    </div>
+                                </div>
+
+
+                                <div class="request-body">
+                                    <div class="body-heading">BODY</div>
+
+                                        <hr>
+                                        <div class="param row">
+                                            <div class="name col-md-3 col-xs-12">token</div>
+                                            <div class="value col-md-9 col-xs-12">
+                                                6Qw1sgf-pj18ITmmL1d5AB1j3O2XKUOIeFjoAWV5RsvZdjPZo7eWer5hu4VFEMlr
+                                            </div>
+                                            <div class="description col-md-9 col-xs-12"><p>Токен пользователя
+                                                    (обязательное)</p>
+                                            </div>
+                                        </div>
+                                        <div class="param row">
+                                            <div class="name col-md-3 col-xs-12">userId</div>
+                                            <div class="value col-md-9 col-xs-12">1</div>
+                                            <div class="description col-md-9 col-xs-12"><p>ID пользователя
+                                                    (обязательное)</p>
+                                            </div>
+                                        </div>
+                                        <div class="param row">
+                                            <div class="name col-md-3 col-xs-12">text</div>
+                                            <div class="value col-md-9 col-xs-12">Привет всем !</div>
+                                            <div class="description col-md-9 col-xs-12"><p>Текст сообщения
+                                                    (обязательное)</p>
+                                            </div>
+                                        </div>
+                                        <div class="param row">
+                                            <div class="name col-md-3 col-xs-12">messageType</div>
+                                            <div class="value col-md-9 col-xs-12">text</div>
+                                            <div class="description col-md-9 col-xs-12"><p>Тип сообщения (обязательное)
+                                                    ["sound", "text", "image"]</p>
+                                            </div>
+                                        </div>
+                                        <div class="param row">
+                                            <div class="name col-md-3 col-xs-12">topic</div>
+                                            <div class="value col-md-9 col-xs-12">Сочи</div>
+                                            <div class="description col-md-9 col-xs-12"><p>Чат в которое отправляется
+                                                    сообщение (обязательное)</p>
+                                            </div>
+                                        </div>
+                                        <div class="param row">
+                                            <div class="name col-md-3 col-xs-12">answer</div>
+                                            <div class="value col-md-9 col-xs-12">12</div>
+                                            <div class="description col-md-9 col-xs-12"><p>ID сообщения на который отвечают</p>
+                                            </div>
+                                        </div>
+                                        <div class="param row">
+                                            <div class="name col-md-3 col-xs-12">file</div>
+                                            <div class="value col-md-9 col-xs-12">file</div>
+                                            <div class="description col-md-9 col-xs-12"><p>Файл который прикреплён к сообщени. соответсвующего типа звук или картинка</p>                                        </div>
+                                        </div>
+                                        <div class="param row">
+                                            <div class="name col-md-3 col-xs-12">jobType</div>
+                                            <div class="value col-md-9 col-xs-12">betonshil</div>
+                                            <div class="description col-md-9 col-xs-12">
+                                                <p>Специальность к которой относится сообщение</p>
+                                            </div>
+                                        </div>
+                                </div>
+
+                            </div>
+                            <br><br>
+                        </div>
+
+
+                        <div class="col-md-6 col-xs-12 examples">
+                            <div class="sample-request">
+                                <div class="heading"><span>Example Request</span></div>
+
+                                <div class="responses-index">
+                                    <div class="response-name"><span>/user/sendMessage</span></div>
+                                </div>
+                            </div>
+
+                            <div class="request code-snippet">
+                                <div class="formatted-requests is-default" data-lang="cURL"
+                                     data-id="a4c0189f-800f-a64a-cde2-e651b24c4691_0">
+            <pre class="click-to-expand-wrapper is-snippet-wrapper"><button
+                    class="btn btn-sm pull-right copy-request copy-request-modal"
+                    data-clipboard-target="#cURL_0_a4c0189f-800f-a64a-cde2-e651b24c4691"
+                    data-before-copy="Copy to Clipboard" data-after-copy="Copied"></button><code
+                    class="language-javascript" id="cURL_0_a4c0189f-800f-a64a-cde2-e651b24c4691">curl --request POST \
+  --url http://78.24.223.159:1337/user/sendMessage \
+  --header 'Content-Type: application/x-www-form-urlencoded' \
+  --data 'token=6Qw1sgf-pj18ITmmL1d5AB1j3O2XKUOIeFjoAWV5RsvZdjPZo7eWer5hu4VFEMlr&amp;userId=1&amp;text=%D0%9F%D1%80%D0%B8%D0%B2%D0%B5%D1%82%20%D0%B2%D1%81%D0%B5%D0%BC%20!&amp;messageType=text&amp;topic=%D0%A1%D0%BE%D1%87%D0%B8'</code></pre>
+                                    <!-- Button over the expand overlay -->
+                                    <button class="btn btn-sm pull-right copy-request"
+                                            data-clipboard-target="#cURL_0_a4c0189f-800f-a64a-cde2-e651b24c4691"
+                                            data-before-copy="Copy to Clipboard" data-after-copy="Copied"></button>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="row row-no-padding row-eq-height" id="b863a8c3-c891-baff-f89e-27f195e1f93f">
+                        <div class="col-md-6 col-xs-12 section">
+                            <div class="api-information">
+                                <div class="heading">
+                                    <div class="name">
+                                        <span class="POST method">POST</span>
+                                        /user/getMessages
+                                    </div>
+                                </div>
+                                <div class="url">http://78.24.223.159:1337/user/getMessages</div>
+                                <div class="description"><p>Получение сообщений</p>
+                                </div>
+
+                                <div class="headers">
+                                    <div class="heading">HEADERS</div>
+                                    <hr>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">Content-Type</div>
+                                        <div class="value col-md-9 col-xs-12">application/x-www-form-urlencoded</div>
+                                    </div>
+                                </div>
+
+
+                                <div class="request-body">
+                                    <div class="body-heading">BODY</div>
+
+                                    <hr>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">token</div>
+                                        <div class="value col-md-9 col-xs-12">
+                                            6Qw1sgf-pj18ITmmL1d5AB1j3O2XKUOIeFjoAWV5RsvZdjPZo7eWer5hu4VFEMlr
+                                        </div>
+                                        <div class="description col-md-9 col-xs-12"><p>Токен пользователя
+                                                (обязательное)</p>
+                                        </div>
+                                    </div>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">userId</div>
+                                        <div class="value col-md-9 col-xs-12">1</div>
+                                        <div class="description col-md-9 col-xs-12"><p>ID пользователя
+                                                (обязательное)</p>
+                                        </div>
+                                    </div>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">topic</div>
+                                        <div class="value col-md-9 col-xs-12">Сочи</div>
+                                        <div class="description col-md-9 col-xs-12"><p>ID Общего чата (обязательное)</p>
+                                        </div>
+                                    </div>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">count</div>
+                                        <div class="value col-md-9 col-xs-12">20</div>
+                                        <div class="description col-md-9 col-xs-12"><p>Сколько сообщений запросить,
+                                                дефолтное значине 20</p>
+                                        </div>
+                                    </div>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">filterUserJobs</div>
+                                        <div class="value col-md-9 col-xs-12">1</div>
+                                        <div class="description col-md-9 col-xs-12"><p>показать сообщения только по специальности пользователя</p>
+                                        </div>
+                                    </div>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">from</div>
+                                        <div class="value col-md-9 col-xs-12">56</div>
+                                        <div class="description col-md-9 col-xs-12"><p>id сообщения с какого получить
+                                                предыдущие (например если пользователь листает историю, и самое верхнее
+                                                сообщение у него с id: 56, то его сюда и нужно указать)</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <br><br>
+                        </div>
+
+
+                        <div class="col-md-6 col-xs-12 examples">
+                            <div class="sample-request">
+                                <div class="heading"><span>Example Request</span></div>
+
+                                <div class="responses-index">
+                                    <div class="response-name"><span>/user/getMessages</span></div>
+                                </div>
+                            </div>
+
+                            <div class="request code-snippet">
+                                <div class="formatted-requests is-default" data-lang="cURL"
+                                     data-id="b863a8c3-c891-baff-f89e-27f195e1f93f_0">
+            <pre class="click-to-expand-wrapper is-snippet-wrapper"><button
+                    class="btn btn-sm pull-right copy-request copy-request-modal"
+                    data-clipboard-target="#cURL_0_b863a8c3-c891-baff-f89e-27f195e1f93f"
+                    data-before-copy="Copy to Clipboard" data-after-copy="Copied"></button><code
+                    class="language-javascript" id="cURL_0_b863a8c3-c891-baff-f89e-27f195e1f93f">curl --request POST \
+  --url http://78.24.223.159:1337/user/getMessages \
+  --data 'token=6Qw1sgf-pj18ITmmL1d5AB1j3O2XKUOIeFjoAWV5RsvZdjPZo7eWer5hu4VFEMlr&amp;userId=1&amp;topic=%D0%A1%D0%BE%D1%87%D0%B8&amp;count=20&amp;from=56'</code></pre>
+                                    <!-- Button over the expand overlay -->
+                                    <button class="btn btn-sm pull-right copy-request"
+                                            data-clipboard-target="#cURL_0_b863a8c3-c891-baff-f89e-27f195e1f93f"
+                                            data-before-copy="Copy to Clipboard" data-after-copy="Copied"></button>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="row row-no-padding row-eq-height" id="7f8c1523-6d47-20a5-fdb9-0bcb0531cea9">
+                        <div class="col-md-6 col-xs-12 section">
+                            <div class="api-information">
+                                <div class="heading">
+                                    <div class="name">
+                                        <span class="POST method">POST</span>
+                                        /user/auth
+                                    </div>
+                                </div>
+                                <div class="url">http://78.24.223.159:1337/user/register</div>
+                                <div class="description"><p>Авторизация пользователя через google sign-in.
+                                        Если пользователь создан впервые, в ответ придёт JSON с объектом пользователя с
+                                        параметром "new: 1" внутри.
+                                        Если пользователь уже был когда то зарегестрирован, и заполнил обязатеьные поля
+                                        профиля (телефон, выбор города) тогода "new: 0"
+                                        userToken - должен будет использоватся в последствии при всех запросах к апи</p>
+                                    <p>Ошибки:
+                                        "status": "gauth_error" - ошибка проверки токена
+                                        "status": "db_error" - ошибка базы данных
+                                        "status": "error" - общая ошибка запроса (не указан IdToken)</p>
+                                </div>
+
+                                <div class="headers">
+                                    <div class="heading">HEADERS</div>
+                                    <hr>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">Content-Type</div>
+                                        <div class="value col-md-9 col-xs-12">application/x-www-form-urlencoded</div>
+                                    </div>
+                                </div>
+
+
+                                <div class="request-body">
+                                    <div class="body-heading">BODY</div>
+
+                                    <hr>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">IdToken</div>
+                                        <div class="value col-md-9 col-xs-12">
+                                            eyJhbGciOiJSUzI1NiIsImtpZCI6IjQxMjlkYjJlYTE4NjBkMmU4NzFlZTQ4NTA2Mjg3ZmIwNWIwNGNhM2YifQ.eyJhenAiOiI1OTY2ODQyMzUzMDAtaTcyZTE4Nm5zazcwa2ZpdTlhdmRqZ2pvcW8wYjRiZDAuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiI1OTY2ODQyMzUzMDAtNzRsc3B2cGM4a29zcWFibjYwZzBxOWU3YzBvMG1qM2wuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMDU3MzM4MzY2MzM4MDEzNjIxMjIiLCJlbWFpbCI6ImJlenppbDg1QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJleHAiOjE1MzEyNDk4MjMsImlzcyI6Imh0dHBzOi8vYWNjb3VudHMuZ29vZ2xlLmNvbSIsImlhdCI6MTUzMTI0NjIyMywibmFtZSI6IkFsZXhhbmRlciBSb21hbnVrIiwicGljdHVyZSI6Imh0dHBzOi8vbGg1Lmdvb2dsZXVzZXJjb250ZW50LmNvbS8tTTlCdXpiQTAxSFUvQUFBQUFBQUFBQUkvQUFBQUFBQUFBQUEvQUFublk3cTlYYzk4eC1ZdUw1QWVJUDNXc3lzWVFWdXVfZy9zOTYtYy9waG90by5qcGciLCJnaXZlbl9uYW1lIjoiQWxleGFuZGVyIiwiZmFtaWx5X25hbWUiOiJSb21hbnVrIiwibG9jYWxlIjoicnUifQ.cPDJLy2_aVjg2CA20AFkpp4v6opv_3q1S8l3xllliDYn_eWyhNmNgLBe6WcX9oRYnuV32e-SReNys1cIcm33G_21Ykfsq_5N_13pyhSkSa4vM1kCm20t8PG7O9S38DEV9hVg-vaWErspeV23ofU6YdhLqT2u0jPcKwikqk0b6gb3-JgNgRkst2REq0Oviro7syorbF5DbUH3EqtWZ3DJdap0UwtW6WITdnN8kjwHXtSLFtvT18Q7_WGVaXlgGC13gPkEqw9bqFviLc7EOhta5xOOKZKNndiGV2uw_kQcXgqU7fdS-OJ-Rrd68GNgTc_il-6XusYvyI1p0E9R8-kfeQ
+                                        </div>
+                                        <div class="description col-md-9 col-xs-12"><p>токен авторизации гугла</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <br><br>
+                        </div>
+
+
+                        <div class="col-md-6 col-xs-12 examples">
+                            <div class="sample-request">
+                                <div class="heading"><span>Example Request</span></div>
+
+                                <div class="responses-index">
+                                    <div class="response-name"><span>/user/auth</span></div>
+                                </div>
+                            </div>
+
+                            <div class="request code-snippet">
+                                <div class="formatted-requests is-default" data-lang="cURL"
+                                     data-id="7f8c1523-6d47-20a5-fdb9-0bcb0531cea9_0">
+            <pre class="click-to-expand-wrapper is-snippet-wrapper"><button
+                    class="btn btn-sm pull-right copy-request copy-request-modal"
+                    data-clipboard-target="#cURL_0_7f8c1523-6d47-20a5-fdb9-0bcb0531cea9"
+                    data-before-copy="Copy to Clipboard" data-after-copy="Copied"></button><code
+                    class="language-javascript" id="cURL_0_7f8c1523-6d47-20a5-fdb9-0bcb0531cea9">curl --request POST \
+  --url http://78.24.223.159:1337/user/register \
+  --header 'Content-Type: application/x-www-form-urlencoded' \
+  --data IdToken=eyJhbGciOiJSUzI1NiIsImtpZCI6IjQxMjlkYjJlYTE4NjBkMmU4NzFlZTQ4NTA2Mjg3ZmIwNWIwNGNhM2YifQ.eyJhenAiOiI1OTY2ODQyMzUzMDAtaTcyZTE4Nm5zazcwa2ZpdTlhdmRqZ2pvcW8wYjRiZDAuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiI1OTY2ODQyMzUzMDAtNzRsc3B2cGM4a29zcWFibjYwZzBxOWU3YzBvMG1qM2wuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMDU3MzM4MzY2MzM4MDEzNjIxMjIiLCJlbWFpbCI6ImJlenppbDg1QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJleHAiOjE1MzEyNDk4MjMsImlzcyI6Imh0dHBzOi8vYWNjb3VudHMuZ29vZ2xlLmNvbSIsImlhdCI6MTUzMTI0NjIyMywibmFtZSI6IkFsZXhhbmRlciBSb21hbnVrIiwicGljdHVyZSI6Imh0dHBzOi8vbGg1Lmdvb2dsZXVzZXJjb250ZW50LmNvbS8tTTlCdXpiQTAxSFUvQUFBQUFBQUFBQUkvQUFBQUFBQUFBQUEvQUFublk3cTlYYzk4eC1ZdUw1QWVJUDNXc3lzWVFWdXVfZy9zOTYtYy9waG90by5qcGciLCJnaXZlbl9uYW1lIjoiQWxleGFuZGVyIiwiZmFtaWx5X25hbWUiOiJSb21hbnVrIiwibG9jYWxlIjoicnUifQ.cPDJLy2_aVjg2CA20AFkpp4v6opv_3q1S8l3xllliDYn_eWyhNmNgLBe6WcX9oRYnuV32e-SReNys1cIcm33G_21Ykfsq_5N_13pyhSkSa4vM1kCm20t8PG7O9S38DEV9hVg-vaWErspeV23ofU6YdhLqT2u0jPcKwikqk0b6gb3-JgNgRkst2REq0Oviro7syorbF5DbUH3EqtWZ3DJdap0UwtW6WITdnN8kjwHXtSLFtvT18Q7_WGVaXlgGC13gPkEqw9bqFviLc7EOhta5xOOKZKNndiGV2uw_kQcXgqU7fdS-OJ-Rrd68GNgTc_il-6XusYvyI1p0E9R8-kfeQ</code></pre>
+                                    <!-- Button over the expand overlay -->
+                                    <button class="btn btn-sm pull-right copy-request"
+                                            data-clipboard-target="#cURL_0_7f8c1523-6d47-20a5-fdb9-0bcb0531cea9"
+                                            data-before-copy="Copy to Clipboard" data-after-copy="Copied"></button>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="row row-no-padding row-eq-height" id="08f2fbc9-89dd-1788-7af3-bcd31e61b170">
+                        <div class="col-md-6 col-xs-12 section">
+                            <div class="api-information">
+                                <div class="heading">
+                                    <div class="name">
+                                        <span class="POST method">POST</span>
+                                        /user/sendAbuse
+                                    </div>
+                                </div>
+                                <div class="url">http://78.24.223.159:1337/user/sendAbuse</div>
+                                <div class="description"><p>Пожаловатся на сообщение.</p>
+                                    <p>В ответ придёт объект сообщения если жалоба поданна успешно
+                                        Или status: 2, тоесть на сообщение уже пожаловались и по нему должно идти
+                                        "голосование" или такого сообщения нету</p>
+                                    <br/>
+                                    <p>На сообщение можно пожаловася только в течении 2ух часов после его создания,
+                                        в противном случае будет так же ответ со status: 2</p>
+                                </div>
+
+                                <div class="headers">
+                                    <div class="heading">HEADERS</div>
+                                    <hr>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">Content-Type</div>
+                                        <div class="value col-md-9 col-xs-12">application/x-www-form-urlencoded</div>
+                                    </div>
+                                </div>
+
+
+                                <div class="request-body">
+                                    <div class="body-heading">BODY</div>
+
+                                    <hr>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">token</div>
+                                        <div class="value col-md-9 col-xs-12">
+                                            6Qw1sgf-pj18ITmmL1d5AB1j3O2XKUOIeFjoAWV5RsvZdjPZo7eWer5hu4VFEMlr
+                                        </div>
+                                        <div class="description col-md-9 col-xs-12"><p>Токен пользователя
+                                                (обязательное)</p>
+                                        </div>
+                                    </div>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">userId</div>
+                                        <div class="value col-md-9 col-xs-12">1</div>
+                                        <div class="description col-md-9 col-xs-12"><p>ID пользователя
+                                                (обязательное)</p>
+                                        </div>
+                                    </div>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">messageId</div>
+                                        <div class="value col-md-9 col-xs-12">1</div>
+                                        <div class="description col-md-9 col-xs-12"><p>ID сообщения на которое поданна
+                                                жалоба</p>
+                                        </div>
+                                    </div>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">abuseType</div>
+                                        <div class="value col-md-9 col-xs-12">spam</div>
+                                        <div class="description col-md-9 col-xs-12"><p>Тип жалобы (spam, violance,
+                                                drugs)</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <br><br>
+                        </div>
+
+
+                        <div class="col-md-6 col-xs-12 examples">
+                            <div class="sample-request">
+                                <div class="heading"><span>Example Request</span></div>
+
+                                <div class="responses-index">
+                                    <div class="response-name"><span>/user/sendAbuse</span></div>
+                                </div>
+                            </div>
+
+                            <div class="request code-snippet">
+                                <div class="formatted-requests is-default" data-lang="cURL"
+                                     data-id="08f2fbc9-89dd-1788-7af3-bcd31e61b170_0">
+            <pre class="click-to-expand-wrapper is-snippet-wrapper"><button
+                    class="btn btn-sm pull-right copy-request copy-request-modal"
+                    data-clipboard-target="#cURL_0_08f2fbc9-89dd-1788-7af3-bcd31e61b170"
+                    data-before-copy="Copy to Clipboard" data-after-copy="Copied"></button><code
+                    class="language-javascript" id="cURL_0_08f2fbc9-89dd-1788-7af3-bcd31e61b170">curl --request POST \
+  --url http://78.24.223.159:1337/user/sendAbuse \
+  --header 'Content-Type: application/x-www-form-urlencoded' \
+  --data 'token=6Qw1sgf-pj18ITmmL1d5AB1j3O2XKUOIeFjoAWV5RsvZdjPZo7eWer5hu4VFEMlr&amp;userId=1&amp;messageId=1&amp;abuseType=spam'</code></pre>
+                                    <!-- Button over the expand overlay -->
+                                    <button class="btn btn-sm pull-right copy-request"
+                                            data-clipboard-target="#cURL_0_08f2fbc9-89dd-1788-7af3-bcd31e61b170"
+                                            data-before-copy="Copy to Clipboard" data-after-copy="Copied"></button>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="row row-no-padding row-eq-height" id="approveAbuse">
+                        <div class="col-md-6 col-xs-12 section">
+                            <div class="api-information">
+                                <div class="heading">
+                                    <div class="name">
+                                        <span class="POST method">POST</span>
+                                        /user/approveAbuse
+                                    </div>
+                                </div>
+                                <div class="url">http://78.24.223.159:1337/user/approveAbuse</div>
+                                <div class="description">
+                                    <p>Подтверждение жалобы на сообщение.</p><br/>
+                                    <p>Подтвердить должно 12 человек(На время разрабоки стоит 2)</p><br/>
+                                    <p>Если пожаловались и поддтвердили 3 сообщения, на 24 часа вешается молчанка</p>
+                                </div>
+
+                                <div class="headers">
+                                    <div class="heading">HEADERS</div>
+                                    <hr>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">Content-Type</div>
+                                        <div class="value col-md-9 col-xs-12">application/x-www-form-urlencoded</div>
+                                    </div>
+                                </div>
+
+
+                                <div class="request-body">
+                                    <div class="body-heading">BODY</div>
+
+                                    <hr>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">token</div>
+                                        <div class="value col-md-9 col-xs-12">
+                                            6Qw1sgf-pj18ITmmL1d5AB1j3O2XKUOIeFjoAWV5RsvZdjPZo7eWer5hu4VFEMlr
+                                        </div>
+                                        <div class="description col-md-9 col-xs-12"><p>Токен пользователя
+                                                (обязательное)</p>
+                                        </div>
+                                    </div>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">userId</div>
+                                        <div class="value col-md-9 col-xs-12">1</div>
+                                        <div class="description col-md-9 col-xs-12"><p>ID пользователя
+                                                (обязательное)</p>
+                                        </div>
+                                    </div>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">messageId</div>
+                                        <div class="value col-md-9 col-xs-12">1</div>
+                                        <div class="description col-md-9 col-xs-12"><p>ID сообщения на которое поданна
+                                                жалоба</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <br><br>
+                        </div>
+
+
+                        <div class="col-md-6 col-xs-12 examples">
+                        </div>
+
+                    </div>
+                    <div class="row row-no-padding row-eq-height" id="contactAdd">
+                        <div class="col-md-6 col-xs-12 section">
+                            <div class="api-information">
+                                <div class="heading">
+                                    <div class="name">
+                                        <span class="POST method">POST</span>
+                                        /user/contactAdd
+                                    </div>
+                                </div>
+                                <div class="url">http://78.24.223.159:1337/user/contactAdd</div>
+                                <div class="description">
+                                    <p>добавление контакта в список контактов</p>
+                                </div>
+
+                                <div class="headers">
+                                    <div class="heading">HEADERS</div>
+                                    <hr>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">Content-Type</div>
+                                        <div class="value col-md-9 col-xs-12">application/x-www-form-urlencoded</div>
+                                    </div>
+                                </div>
+
+
+                                <div class="request-body">
+                                    <div class="body-heading">BODY</div>
+
+                                    <hr>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">token</div>
+                                        <div class="value col-md-9 col-xs-12">
+                                            6Qw1sgf-pj18ITmmL1d5AB1j3O2XKUOIeFjoAWV5RsvZdjPZo7eWer5hu4VFEMlr
+                                        </div>
+                                        <div class="description col-md-9 col-xs-12"><p>Токен пользователя
+                                                (обязательное)</p>
+                                        </div>
+                                    </div>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">userId</div>
+                                        <div class="value col-md-9 col-xs-12">1</div>
+                                        <div class="description col-md-9 col-xs-12"><p>ID пользователя
+                                                (обязательное)</p>
+                                        </div>
+                                    </div>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">contact</div>
+                                        <div class="value col-md-9 col-xs-12">1</div>
+                                        <div class="description col-md-9 col-xs-12"><p>ID контакта которого добавить (обязательное)</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <br><br>
+                        </div>
+
+
+                        <div class="col-md-6 col-xs-12 examples">
+                        </div>
+
+                    </div>
+                    <div class="row row-no-padding row-eq-height" id="contactRemove">
+                        <div class="col-md-6 col-xs-12 section">
+                            <div class="api-information">
+                                <div class="heading">
+                                    <div class="name">
+                                        <span class="POST method">POST</span>
+                                        /user/contactAdd
+                                    </div>
+                                </div>
+                                <div class="url">http://78.24.223.159:1337/user/contactRemove</div>
+                                <div class="description">
+                                    <p>удаление контакта из списка контактов</p>
+                                </div>
+
+                                <div class="headers">
+                                    <div class="heading">HEADERS</div>
+                                    <hr>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">Content-Type</div>
+                                        <div class="value col-md-9 col-xs-12">application/x-www-form-urlencoded</div>
+                                    </div>
+                                </div>
+
+
+                                <div class="request-body">
+                                    <div class="body-heading">BODY</div>
+
+                                    <hr>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">token</div>
+                                        <div class="value col-md-9 col-xs-12">
+                                            6Qw1sgf-pj18ITmmL1d5AB1j3O2XKUOIeFjoAWV5RsvZdjPZo7eWer5hu4VFEMlr
+                                        </div>
+                                        <div class="description col-md-9 col-xs-12"><p>Токен пользователя
+                                                (обязательное)</p>
+                                        </div>
+                                    </div>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">userId</div>
+                                        <div class="value col-md-9 col-xs-12">1</div>
+                                        <div class="description col-md-9 col-xs-12"><p>ID пользователя
+                                                (обязательное)</p>
+                                        </div>
+                                    </div>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">contact</div>
+                                        <div class="value col-md-9 col-xs-12">1</div>
+                                        <div class="description col-md-9 col-xs-12"><p>ID контакта которого удалить (обязательное)</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <br><br>
+                        </div>
+
+
+                        <div class="col-md-6 col-xs-12 examples">
+                        </div>
+
+                    </div>
+                    <div class="row row-no-padding row-eq-height" id="getContactsList">
+                        <div class="col-md-6 col-xs-12 section">
+                            <div class="api-information">
+                                <div class="heading">
+                                    <div class="name">
+                                        <span class="POST method">POST</span>
+                                        /user/contactAdd
+                                    </div>
+                                </div>
+                                <div class="url">http://78.24.223.159:1337/user/getContactsList</div>
+                                <div class="description">
+                                    <p>получение списка контактов</p>
+                                </div>
+                                <pre>
+В ответ придёт массив с обьектами юзеров, к станадртному набору атрибутов юзеру добавится
+"unreadCount": 10,          //Колличество не прочитанных сообщений
+"lastMessage": [
+    {
+        "id": 34,
+        "text": "Сообщение 4",
+        "messageType": "text"
+    }
+]
+                                </pre>
+
+                                <div class="headers">
+                                    <div class="heading">HEADERS</div>
+                                    <hr>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">Content-Type</div>
+                                        <div class="value col-md-9 col-xs-12">application/x-www-form-urlencoded</div>
+                                    </div>
+                                </div>
+
+                                <div class="request-body">
+                                    <div class="body-heading">BODY</div>
+
+                                    <hr>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">token</div>
+                                        <div class="value col-md-9 col-xs-12">
+                                            6Qw1sgf-pj18ITmmL1d5AB1j3O2XKUOIeFjoAWV5RsvZdjPZo7eWer5hu4VFEMlr
+                                        </div>
+                                        <div class="description col-md-9 col-xs-12"><p>Токен пользователя
+                                                (обязательное)</p>
+                                        </div>
+                                    </div>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">userId</div>
+                                        <div class="value col-md-9 col-xs-12">1</div>
+                                        <div class="description col-md-9 col-xs-12"><p>ID пользователя
+                                                (обязательное)</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <br><br>
+                        </div>
+
+
+                        <div class="col-md-6 col-xs-12 examples">
+                        </div>
+
+                    </div>
+                    <div class="row row-no-padding row-eq-height" id="setMessageRead">
+                        <div class="col-md-6 col-xs-12 section">
+                            <div class="api-information">
+                                <div class="heading">
+                                    <div class="name">
+                                        <span class="POST method">POST</span>
+                                        /user/setMessageRead
+                                    </div>
+                                </div>
+                                <div class="url">http://78.24.223.159:1337/user/setMessageRead</div>
+                                <div class="description">
+                                    <p>отмечает сообщения прочитанными</p>
+                                </div>
+
+
+                                <div class="headers">
+                                    <div class="heading">HEADERS</div>
+                                    <hr>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">Content-Type</div>
+                                        <div class="value col-md-9 col-xs-12">application/x-www-form-urlencoded</div>
+                                    </div>
+                                </div>
+
+                                <div class="request-body">
+                                    <div class="body-heading">BODY</div>
+
+                                    <hr>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">token</div>
+                                        <div class="value col-md-9 col-xs-12">
+                                            6Qw1sgf-pj18ITmmL1d5AB1j3O2XKUOIeFjoAWV5RsvZdjPZo7eWer5hu4VFEMlr
+                                        </div>
+                                        <div class="description col-md-9 col-xs-12"><p>Токен пользователя
+                                                (обязательное)</p>
+                                        </div>
+                                    </div>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">userId</div>
+                                        <div class="value col-md-9 col-xs-12">1</div>
+                                        <div class="description col-md-9 col-xs-12"><p>ID пользователя
+                                                (обязательное)</p>
+                                        </div>
+                                    </div>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">messageIds</div>
+                                        <div class="value col-md-9 col-xs-12">36,37,38</div>
+                                        <div class="description col-md-9 col-xs-12"><p>айдишники сообщений через запятую</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <br><br>
+                        </div>
+
+
+                        <div class="col-md-6 col-xs-12 examples">
+                        </div>
+
+                    </div>
+                    <div class="row row-no-padding row-eq-height" id="getCitiesList">
+                        <div class="col-md-6 col-xs-12 section">
+                            <div class="api-information">
+                                <div class="heading">
+                                    <div class="name">
+                                        <span class="POST method">POST</span>
+                                        /user/getCitiesList
+                                    </div>
+                                </div>
+                                <div class="url">http://78.24.223.159:1337/user/getCitiesList</div>
+                                <div class="description">
+                                    <p>получение списка городов</p>
+                                </div>
+                                <pre>
+{
+    "cities": {
+        "Сочи": [
+            "Лазаревское",
+            "Адлер",
+            "Центр"
+        ],
+        "Краснодар": [
+            "КРИ",
+            "ФЫВ"
+        ]
+    }
+}
+                                </pre>
+
+                                <div class="headers">
+                                    <div class="heading">HEADERS</div>
+                                    <hr>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">Content-Type</div>
+                                        <div class="value col-md-9 col-xs-12">application/x-www-form-urlencoded</div>
+                                    </div>
+                                </div>
+
+                                <div class="request-body">
+                                    <div class="body-heading">BODY</div>
+
+                                    <hr>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">token</div>
+                                        <div class="value col-md-9 col-xs-12">
+                                            6Qw1sgf-pj18ITmmL1d5AB1j3O2XKUOIeFjoAWV5RsvZdjPZo7eWer5hu4VFEMlr
+                                        </div>
+                                        <div class="description col-md-9 col-xs-12"><p>Токен пользователя
+                                                (обязательное)</p>
+                                        </div>
+                                    </div>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">userId</div>
+                                        <div class="value col-md-9 col-xs-12">1</div>
+                                        <div class="description col-md-9 col-xs-12"><p>ID пользователя
+                                                (обязательное)</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <br><br>
+                        </div>
+
+
+                        <div class="col-md-6 col-xs-12 examples">
+                        </div>
+
+                    </div>
+                    <div class="row row-no-padding row-eq-height" id="addOrder">
+                        <div class="col-md-6 col-xs-12 section">
+                            <div class="api-information">
+                                <div class="heading">
+                                    <div class="name">
+                                        <span class="POST method">POST</span>
+                                        /user/addOrder
+                                    </div>
+                                </div>
+                                <div class="url">http://78.24.223.159:1337/user/addOrder</div>
+                                <div class="description">
+                                    <p>Добавить заказ(работу)
+поля сязанные с пользователем заполняются автоматичиски из данных заказчика, исключение телефон
+                                    </p>
+                                </div>
+                                <pre>
+в ответ придёт
+{
+    "createdAt": 1548248467250,
+    "updatedAt": 1548248467250,
+    "id": 38,
+    "opened": true,
+    "phoneNumber": "",
+    "jobType": "alpinist",
+    "name": "Мастерам Система",
+    "description": "Залезть на гору",
+    "topic": "Сочи",
+    "user": 1
+}
+</pre>
+
+                                <div class="headers">
+                                    <div class="heading">HEADERS</div>
+                                    <hr>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">Content-Type</div>
+                                        <div class="value col-md-9 col-xs-12">application/x-www-form-urlencoded</div>
+                                    </div>
+                                </div>
+
+                                <div class="request-body">
+                                    <div class="body-heading">BODY</div>
+
+                                    <hr>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">token</div>
+                                        <div class="value col-md-9 col-xs-12">
+                                            6Qw1sgf-pj18ITmmL1d5AB1j3O2XKUOIeFjoAWV5RsvZdjPZo7eWer5hu4VFEMlr
+                                        </div>
+                                        <div class="description col-md-9 col-xs-12"><p>Токен пользователя
+                                                (обязательное)</p>
+                                        </div>
+                                    </div>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">userId</div>
+                                        <div class="value col-md-9 col-xs-12">1</div>
+                                        <div class="description col-md-9 col-xs-12"><p>ID пользователя
+                                                (обязательное)</p>
+                                        </div>
+                                    </div>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">jobType</div>
+                                        <div class="value col-md-9 col-xs-12">betonshhik</div>
+                                        <div class="description col-md-9 col-xs-12"><p>Тип работ, (не обязателен)</p>
+                                        </div>
+                                    </div>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">description</div>
+                                        <div class="value col-md-9 col-xs-12">Описание заказа</div>
+                                        <div class="description col-md-9 col-xs-12"><p>Описание заказа, текстовое поле</p>
+                                        </div>
+                                    </div>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">phoneNumber</div>
+                                        <div class="value col-md-9 col-xs-12">номер телефона</div>
+                                        <div class="description col-md-9 col-xs-12"><p>опциональное поле, если не указано, заполняется автоматом из данных пользователя</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <br><br>
+                        </div>
+
+
+                        <div class="col-md-6 col-xs-12 examples">
+                        </div>
+
+                    </div>
+                    <div class="row row-no-padding row-eq-height" id="updateOrder">
+                        <div class="col-md-6 col-xs-12 section">
+                            <div class="api-information">
+                                <div class="heading">
+                                    <div class="name">
+                                        <span class="POST method">POST</span>
+                                        /user/updateOrder
+                                    </div>
+                                </div>
+                                <div class="url">http://78.24.223.159:1337/user/updateOrder</div>
+                                <div class="description">
+                                    <p>Обновить данные заказа</p>
+                                </div>
+                                <pre>
+в ответ придёт
+{
+    "createdAt": 1548248467250,
+    "updatedAt": 1548248467250,
+    "id": 38,
+    "opened": true,
+    "phoneNumber": "",
+    "jobType": "alpinist",
+    "name": "Мастерам Система",
+    "description": "Залезть на гору",
+    "topic": "Сочи",
+    "user": 1
+}
+</pre>
+
+                                <div class="headers">
+                                    <div class="heading">HEADERS</div>
+                                    <hr>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">Content-Type</div>
+                                        <div class="value col-md-9 col-xs-12">application/x-www-form-urlencoded</div>
+                                    </div>
+                                </div>
+
+                                <div class="request-body">
+                                    <div class="body-heading">BODY</div>
+
+                                    <hr>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">token</div>
+                                        <div class="value col-md-9 col-xs-12">
+                                            6Qw1sgf-pj18ITmmL1d5AB1j3O2XKUOIeFjoAWV5RsvZdjPZo7eWer5hu4VFEMlr
+                                        </div>
+                                        <div class="description col-md-9 col-xs-12"><p>Токен пользователя
+                                                (обязательное)</p>
+                                        </div>
+                                    </div>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">userId</div>
+                                        <div class="value col-md-9 col-xs-12">1</div>
+                                        <div class="description col-md-9 col-xs-12"><p>ID пользователя
+                                                (обязательное)</p>
+                                        </div>
+                                    </div>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">jobType</div>
+                                        <div class="value col-md-9 col-xs-12">betonshhik</div>
+                                        <div class="description col-md-9 col-xs-12"><p>Тип работ, (не обязателен)</p>
+                                        </div>
+                                    </div>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">description</div>
+                                        <div class="value col-md-9 col-xs-12">Описание заказа</div>
+                                        <div class="description col-md-9 col-xs-12"><p>Описание заказа, текстовое поле</p>
+                                        </div>
+                                    </div>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">phoneNumber</div>
+                                        <div class="value col-md-9 col-xs-12">номер телефона</div>
+                                        <div class="description col-md-9 col-xs-12"><p>опциональное поле, если не указано, заполняется автоматом из данных пользователя</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <br><br>
+                        </div>
+
+
+                        <div class="col-md-6 col-xs-12 examples">
+                        </div>
+
+                    </div>
+                    <div class="row row-no-padding row-eq-height" id="getOrders">
+                        <div class="col-md-6 col-xs-12 section">
+                            <div class="api-information">
+                                <div class="heading">
+                                    <div class="name">
+                                        <span class="POST method">POST</span>
+                                        /user/getOrders
+                                    </div>
+                                </div>
+                                <div class="url">http://78.24.223.159:1337/user/getOrders</div>
+                                <div class="description">
+                                    <p>Получить список заказов, в ответе массив с заказами "[]", отсортированный по времени обновления</p>
+                                </div>
+                                <pre>
+
+[
+    {
+        "createdAt": 1548241112767,
+        "updatedAt": 1548242205342,
+        "id": 33,
+        "opened": true,
+        "phoneNumber": "",
+        "jobType": "betonshhik",
+        "name": "Мастерам Система",
+        "description": "Замешать кашу",
+        "topic": "Сочи",
+        "user": {
+            "id": 1,
+            "email": "aaa@aaa.com",
+            "name": "Мастерам",
+            "surname": "Система",
+            "topic": "Сочи",
+            "phoneNumber": "",
+            "pro": false,
+            "userKarma": 4
+        }
+    },
+    {
+        "createdAt": 1548242201160,
+        "updatedAt": 1548242201160,
+        "id": 34,
+        "opened": true,
+        "phoneNumber": "",
+        "jobType": "betonshhik",
+        "name": "Мастерам Система",
+        "description": "Прокопать пещеру",
+        "topic": "Сочи",
+        "user": {
+            "id": 1,
+            "email": "aaa@aaa.com",
+            "name": "Мастерам",
+            "surname": "Система",
+            "topic": "Сочи",
+            "phoneNumber": "",
+            "pro": false,
+            "userKarma": 4
+        }
+    }]
+</pre>
+
+                                <div class="headers">
+                                    <div class="heading">HEADERS</div>
+                                    <hr>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">Content-Type</div>
+                                        <div class="value col-md-9 col-xs-12">application/x-www-form-urlencoded</div>
+                                    </div>
+                                </div>
+
+                                <div class="request-body">
+                                    <div class="body-heading">BODY</div>
+
+                                    <hr>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">token</div>
+                                        <div class="value col-md-9 col-xs-12">
+                                            6Qw1sgf-pj18ITmmL1d5AB1j3O2XKUOIeFjoAWV5RsvZdjPZo7eWer5hu4VFEMlr
+                                        </div>
+                                        <div class="description col-md-9 col-xs-12"><p>Токен пользователя
+                                                (обязательное)</p>
+                                        </div>
+                                    </div>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">userId</div>
+                                        <div class="value col-md-9 col-xs-12">1</div>
+                                        <div class="description col-md-9 col-xs-12"><p>ID пользователя
+                                                (обязательное)</p>
+                                        </div>
+                                    </div>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">jobType</div>
+                                        <div class="value col-md-9 col-xs-12">betonshhik</div>
+                                        <div class="description col-md-9 col-xs-12"><p>Тип работ</p>
+                                        </div>
+                                    </div>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">from</div>
+                                        <div class="value col-md-9 col-xs-12">20</div>
+                                        <div class="description col-md-9 col-xs-12"><p>опциональное поле, c какого айди показывать следующие объявления,
+                                                по дефолту подаётся 20 свежих, схема аналогичная чату
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">own</div>
+                                        <div class="value col-md-9 col-xs-12">1</div>
+                                        <div class="description col-md-9 col-xs-12"><p>опциональное поле, показать только свои заявки, в этом случае показываются так же закрытые объявления</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <br><br>
+                        </div>
+
+
+                        <div class="col-md-6 col-xs-12 examples">
+                        </div>
+
+                    </div>
+                    <div class="row row-no-padding row-eq-height" id="getOrder">
+                        <div class="col-md-6 col-xs-12 section">
+                            <div class="api-information">
+                                <div class="heading">
+                                    <div class="name">
+                                        <span class="POST method">POST</span>
+                                        /user/getOrder
+                                    </div>
+                                </div>
+                                <div class="url">http://78.24.223.159:1337/user/getOrder</div>
+                                <div class="description">
+                                    <p>Получить заказ по ид</p>
+                                </div>
+                                <pre>
+
+    {
+        "createdAt": 1548241112767,
+        "updatedAt": 1548242205342,
+        "id": 33,
+        "opened": true,
+        "phoneNumber": "",
+        "jobType": "betonshhik",
+        "name": "Мастерам Система",
+        "description": "Замешать кашу",
+        "topic": "Сочи",
+        "user": {
+            "id": 1,
+            "email": "aaa@aaa.com",
+            "name": "Мастерам",
+            "surname": "Система",
+            "topic": "Сочи",
+            "phoneNumber": "",
+            "pro": false,
+            "userKarma": 4
+        }
+    }
+</pre>
+
+                                <div class="headers">
+                                    <div class="heading">HEADERS</div>
+                                    <hr>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">Content-Type</div>
+                                        <div class="value col-md-9 col-xs-12">application/x-www-form-urlencoded</div>
+                                    </div>
+                                </div>
+
+                                <div class="request-body">
+                                    <div class="body-heading">BODY</div>
+
+                                    <hr>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">token</div>
+                                        <div class="value col-md-9 col-xs-12">
+                                            6Qw1sgf-pj18ITmmL1d5AB1j3O2XKUOIeFjoAWV5RsvZdjPZo7eWer5hu4VFEMlr
+                                        </div>
+                                        <div class="description col-md-9 col-xs-12"><p>Токен пользователя
+                                                (обязательное)</p>
+                                        </div>
+                                    </div>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">userId</div>
+                                        <div class="value col-md-9 col-xs-12">1</div>
+                                        <div class="description col-md-9 col-xs-12"><p>ID пользователя
+                                                (обязательное)</p>
+                                        </div>
+                                    </div>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">orderId</div>
+                                        <div class="value col-md-9 col-xs-12">32</div>
+                                        <div class="description col-md-9 col-xs-12"><p>Айди заказа</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <br><br>
+                        </div>
+
+
+                        <div class="col-md-6 col-xs-12 examples">
+                        </div>
+
+                    </div>
+                    <div class="row row-no-padding row-eq-height" id="closeOrder">
+                        <div class="col-md-6 col-xs-12 section">
+                            <div class="api-information">
+                                <div class="heading">
+                                    <div class="name">
+                                        <span class="POST method">POST</span>
+                                        /user/closeOrder
+                                    </div>
+                                </div>
+                                <div class="url">http://78.24.223.159:1337/user/closeOrder</div>
+                                <div class="description">
+                                    <p>Закрыть заказ, закрыть можно свой заказ, в противном случае будет return res.json({error: "Not owner"});</p>
+                                </div>
+                                <pre>
+
+    {
+        "createdAt": 1548241112767,
+        "updatedAt": 1548242205342,
+        "id": 33,
+        "opened": true,
+        "phoneNumber": "",
+        "jobType": "betonshhik",
+        "name": "Мастерам Система",
+        "description": "Замешать кашу",
+        "topic": "Сочи",
+        "user": {
+            "id": 1,
+            "email": "aaa@aaa.com",
+            "name": "Мастерам",
+            "surname": "Система",
+            "topic": "Сочи",
+            "phoneNumber": "",
+            "pro": false,
+            "userKarma": 4
+        }
+    }
+</pre>
+
+                                <div class="headers">
+                                    <div class="heading">HEADERS</div>
+                                    <hr>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">Content-Type</div>
+                                        <div class="value col-md-9 col-xs-12">application/x-www-form-urlencoded</div>
+                                    </div>
+                                </div>
+
+                                <div class="request-body">
+                                    <div class="body-heading">BODY</div>
+
+                                    <hr>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">token</div>
+                                        <div class="value col-md-9 col-xs-12">
+                                            6Qw1sgf-pj18ITmmL1d5AB1j3O2XKUOIeFjoAWV5RsvZdjPZo7eWer5hu4VFEMlr
+                                        </div>
+                                        <div class="description col-md-9 col-xs-12"><p>Токен пользователя
+                                                (обязательное)</p>
+                                        </div>
+                                    </div>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">userId</div>
+                                        <div class="value col-md-9 col-xs-12">1</div>
+                                        <div class="description col-md-9 col-xs-12"><p>ID пользователя
+                                                (обязательное)</p>
+                                        </div>
+                                    </div>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">orderId</div>
+                                        <div class="value col-md-9 col-xs-12">32</div>
+                                        <div class="description col-md-9 col-xs-12"><p>Айди заказа</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <br><br>
+                        </div>
+
+
+                        <div class="col-md-6 col-xs-12 examples">
+                        </div>
+
+                    </div>
+                    <div class="row row-no-padding row-eq-height" id="435fc4e8-ee20-2784-e6ed-566ab178dc15">
+                        <div class="col-md-6 col-xs-12 section">
+                            <div class="api-information">
+                                <div class="heading">
+                                    <div class="name">
+                                        <span class="POST method">POST</span>
+                                        /user/deleteMessage
+                                    </div>
+                                </div>
+                                <div class="url">http://78.24.223.159:1337/user/deleteMessage</div>
+                                <div class="description"><p>Удалить своё сообщение.</p>
+                                    <p>В ответ придёт объект сообщения если удаление успешно</p>
+                                </div>
+
+                                <div class="headers">
+                                    <div class="heading">HEADERS</div>
+                                    <hr>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">Content-Type</div>
+                                        <div class="value col-md-9 col-xs-12">application/x-www-form-urlencoded</div>
+                                    </div>
+                                </div>
+
+
+                                <div class="request-body">
+                                    <div class="body-heading">BODY</div>
+
+                                    <hr>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">token</div>
+                                        <div class="value col-md-9 col-xs-12">
+                                            6Qw1sgf-pj18ITmmL1d5AB1j3O2XKUOIeFjoAWV5RsvZdjPZo7eWer5hu4VFEMlr
+                                        </div>
+                                        <div class="description col-md-9 col-xs-12"><p>Токен пользователя
+                                                (обязательное)</p>
+                                        </div>
+                                    </div>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">userId</div>
+                                        <div class="value col-md-9 col-xs-12">1</div>
+                                        <div class="description col-md-9 col-xs-12"><p>ID пользователя
+                                                (обязательное)</p>
+                                        </div>
+                                    </div>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">messageId</div>
+                                        <div class="value col-md-9 col-xs-12">9</div>
+                                        <div class="description col-md-9 col-xs-12"><p>ID сообщения на которое поданна
+                                                жалоба</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <br><br>
+                        </div>
+
+
+                        <div class="col-md-6 col-xs-12 examples">
+                            <div class="sample-request">
+                                <div class="heading"><span>Example Request</span></div>
+
+                                <div class="responses-index">
+                                    <div class="response-name"><span>/user/deleteMessage</span></div>
+                                </div>
+                            </div>
+
+                            <div class="request code-snippet">
+                                <div class="formatted-requests is-default" data-lang="cURL"
+                                     data-id="435fc4e8-ee20-2784-e6ed-566ab178dc15_0">
+            <pre class="click-to-expand-wrapper is-snippet-wrapper"><button
+                    class="btn btn-sm pull-right copy-request copy-request-modal"
+                    data-clipboard-target="#cURL_0_435fc4e8-ee20-2784-e6ed-566ab178dc15"
+                    data-before-copy="Copy to Clipboard" data-after-copy="Copied"></button><code
+                    class="language-javascript" id="cURL_0_435fc4e8-ee20-2784-e6ed-566ab178dc15">curl --request POST \
+  --url http://78.24.223.159:1337/user/deleteMessage \
+  --header 'Content-Type: application/x-www-form-urlencoded' \
+  --data 'token=6Qw1sgf-pj18ITmmL1d5AB1j3O2XKUOIeFjoAWV5RsvZdjPZo7eWer5hu4VFEMlr&amp;userId=1&amp;messageId=9'</code></pre>
+                                    <!-- Button over the expand overlay -->
+                                    <button class="btn btn-sm pull-right copy-request"
+                                            data-clipboard-target="#cURL_0_435fc4e8-ee20-2784-e6ed-566ab178dc15"
+                                            data-before-copy="Copy to Clipboard" data-after-copy="Copied"></button>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="row row-no-padding row-eq-height" id="76ab4107-0c67-9548-66ca-5c20279cfdb8">
+                        <div class="col-md-6 col-xs-12 section">
+                            <div class="api-information">
+                                <div class="heading">
+                                    <div class="name">
+                                        <span class="POST method">POST</span>
+                                        /user/getProffesionsList
+                                    </div>
+                                </div>
+                                <div class="url">http://78.24.223.159:1337/user/getProffesionsList</div>
+                                <div class="description"><p>Список професий, нужно ли его зашивать в приложении ?</p>
+                                </div>
+
+
+                                <div class="request-body">
+                                    <div class="body-heading">BODY</div>
+                                    <hr>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">userId</div>
+                                        <div class="value col-md-9 col-xs-12">1</div>
+                                        <div class="description col-md-9 col-xs-12"><p>ID пользователя
+                                                (обязательное)</p>
+                                        </div>
+                                    </div>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">token</div>
+                                        <div class="value col-md-9 col-xs-12">
+                                            uSJynr0URTzHxdU4lghNv73MTBichM5qM4SSWLJqTVUaHewGRVmH-APY39g-7aFC
+                                        </div>
+                                        <div class="description col-md-9 col-xs-12"><p>Токен пользователя
+                                                (обязательное)</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <br><br>
+                        </div>
+
+
+                        <div class="col-md-6 col-xs-12 examples">
+                            <div class="sample-request">
+                                <div class="heading"><span>Example Request</span></div>
+
+                                <div class="responses-index">
+                                    <div class="response-name"><span>/user/getProffesionsList</span></div>
+                                </div>
+                            </div>
+
+                            <div class="request code-snippet">
+                                <div class="formatted-requests is-default" data-lang="cURL"
+                                     data-id="76ab4107-0c67-9548-66ca-5c20279cfdb8_0">
+            <pre class="click-to-expand-wrapper is-snippet-wrapper"><button
+                    class="btn btn-sm pull-right copy-request copy-request-modal"
+                    data-clipboard-target="#cURL_0_76ab4107-0c67-9548-66ca-5c20279cfdb8"
+                    data-before-copy="Copy to Clipboard" data-after-copy="Copied"></button><code
+                    class="language-javascript" id="cURL_0_76ab4107-0c67-9548-66ca-5c20279cfdb8">curl --request POST \
+  --url http://78.24.223.159:1337/user/getProffesionsList \
+  --header 'content-type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW' \
+  --form userId=1 \
+  --form token=uSJynr0URTzHxdU4lghNv73MTBichM5qM4SSWLJqTVUaHewGRVmH-APY39g-7aFC</code></pre>
+                                    <!-- Button over the expand overlay -->
+                                    <button class="btn btn-sm pull-right copy-request"
+                                            data-clipboard-target="#cURL_0_76ab4107-0c67-9548-66ca-5c20279cfdb8"
+                                            data-before-copy="Copy to Clipboard" data-after-copy="Copied"></button>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="row row-no-padding row-eq-height" id="addKarma">
+                        <div class="col-md-6 col-xs-12 section">
+                            <div class="api-information">
+                                <div class="heading">
+                                    <div class="name">
+                                        <span class="POST method">POST</span>
+                                        /user/addKarma
+                                    </div>
+                                </div>
+                                <div class="url">http://78.24.223.159:1337/user/addKarma</div>
+                                <div class="description"><p>Добавляет +1 к карме</p>
+                                </div>
+
+
+                                <div class="request-body">
+                                    <div class="body-heading">BODY</div>
+                                    <hr>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">userId</div>
+                                        <div class="value col-md-9 col-xs-12">1</div>
+                                        <div class="description col-md-9 col-xs-12"><p>ID пользователя
+                                                (обязательное)</p>
+                                        </div>
+                                    </div>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">token</div>
+                                        <div class="value col-md-9 col-xs-12">
+                                            uSJynr0URTzHxdU4lghNv73MTBichM5qM4SSWLJqTVUaHewGRVmH-APY39g-7aFC
+                                        </div>
+                                        <div class="description col-md-9 col-xs-12"><p>Токен пользователя
+                                                (обязательное)</p>
+                                        </div>
+                                    </div>
+                                    <div class="param row">
+                                        <div class="name col-md-3 col-xs-12">targetUser</div>
+                                        <div class="value col-md-9 col-xs-12">2</div>
+                                        <div class="description col-md-9 col-xs-12"><p>ID кому добавить
+                                                (обязательное)</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <br><br>
+                        </div>
+
+
+                        <div class="col-md-6 col-xs-12 examples">
+                            <div class="sample-request">
+                                <div class="heading"><span>Example Request</span></div>
+
+                                <div class="responses-index">
+                                    <div class="response-name"><span>/user/addKarma</span></div>
+                                </div>
+                            </div>
+
+                            <div class="request code-snippet">
+                                <div class="formatted-requests is-default" data-lang="cURL"
+                                     data-id="9b33b719-c918-38cd-e381-ea9bfa40c336_0">
+            <pre class="click-to-expand-wrapper is-snippet-wrapper"><button
+                    class="btn btn-sm pull-right copy-request copy-request-modal"
+                    data-clipboard-target="#cURL_0_9b33b719-c918-38cd-e381-ea9bfa40c336"
+                    data-before-copy="Copy to Clipboard" data-after-copy="Copied"></button><code
+                    class="language-javascript" id="cURL_0_9b33b719-c918-38cd-e381-ea9bfa40c336">curl --request POST \
+  --url http://78.24.223.159:1337/user/addKarma \
+  --header 'content-type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW' \
+  --form userId=1 \
+  --form token=uSJynr0URTzHxdU4lghNv73MTBichM5qM4SSWLJqTVUaHewGRVmH-APY39g-7aFC \
+  --form targetUser=2</code></pre>
+                                    <!-- Button over the expand overlay -->
+                                    <button class="btn btn-sm pull-right copy-request"
+                                            data-clipboard-target="#cURL_0_9b33b719-c918-38cd-e381-ea9bfa40c336"
+                                            data-before-copy="Copy to Clipboard" data-after-copy="Copied"></button>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <a href="https://www.getpostman.com/docs/creating_documentation" target="_blank"
+                   class="promo-banner is-hidden" id="live-documentation-banner">
+                    <div class="container">
+                        <i class="pm-generic-icon pm-icon-orange-back pm-icon-rounded pm-icon-lg pm-generic-icon-book"></i>
+                        <h3>This is live documentation generated by Postman Pro</h3>
+                        <span>Create your own live docs</span>
+                    </div>
+                </a>
+            </div>
+            <div class="no-gutter phantom-sidebar"></div>
+            <div class="no-gutter sidebar" id="nav-sidebar">
+                <div class="collection-heading">
+                    <p class="heading">masteram external</p>
+                </div>
+                <ul class="nav navbar-nav" id="navbar-example">
+                    <li class="request intro">
+                        <a class="nav-link dropdown-item" href="#intro">
+                            <div class="request-name">Introduction</div>
+                        </a>
+                    </li>
+                    <li class="toc">
+                        <ul></ul>
+                    </li>
+                    <li class="request">
+                        <div class="POST method">
+                            <span>POST</span>
+                        </div>
+                        <div class="request-name" title="/user/ping">
+                            <a class="nav-link dropdown-item" href="#08f4e83b-fffe-ad61-5eac-9e392d8d6255">
+                                <span>/user/ping</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="request">
+                        <div class="POST method">
+                            <span>POST</span>
+                        </div>
+                        <div class="request-name" title="/user/uploadAvatar">
+                            <a class="nav-link dropdown-item" href="#uploadAvatar">
+                                <span>/user/uploadAvatar</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="request">
+                        <div class="POST method">
+                            <span>POST</span>
+                        </div>
+                        <div class="request-name" title="/user/removeAvatar">
+                            <a class="nav-link dropdown-item" href="#removeAvatar">
+                                <span>/user/removeAvatar</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="request">
+                        <div class="POST method">
+                            <span>POST</span>
+                        </div>
+                        <div class="request-name" title="/user/uploadToAlbum">
+                            <a class="nav-link dropdown-item" href="#uploadToAlbum">
+                                <span>/user/uploadToAlbum</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="request">
+                        <div class="POST method">
+                            <span>POST</span>
+                        </div>
+                        <div class="request-name" title="/user/removeFromAlbum">
+                            <a class="nav-link dropdown-item" href="#removeFromAlbum">
+                                <span>/user/removeFromAlbum</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="request">
+                        <div class="POST method">
+                            <span>POST</span>
+                        </div>
+                        <div class="request-name" title="/user/updateProfile">
+                            <a class="nav-link dropdown-item" href="#0e8c0d06-d519-d691-366b-df7c4daed4ec">
+                                <span>/user/updateProfile</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="request">
+                        <div class="POST method">
+                            <span>POST</span>
+                        </div>
+                        <div class="request-name" title="/user/setFCMToken">
+                            <a class="nav-link dropdown-item" href="#f40ea07d-282f-1ca0-23e4-1fe1907844b0">
+                                <span>/user/setFCMToken</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="request">
+                        <div class="POST method">
+                            <span>POST</span>
+                        </div>
+                        <div class="request-name" title="/user/getUserData">
+                            <a class="nav-link dropdown-item" href="#5d4f471e-99fd-1a0e-6e95-29e4ba05eab6">
+                                <span>/user/getUserData</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="request">
+                        <div class="POST method">
+                            <span>POST</span>
+                        </div>
+                        <div class="request-name" title="/user/blockUser">
+                            <a class="nav-link dropdown-item" href="#9883452b-6f96-49b0-3d40-3f9654b3a609">
+                                <span>/user/blockUser</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="request">
+                        <div class="POST method">
+                            <span>POST</span>
+                        </div>
+                        <div class="request-name" title="/user/sendMessage">
+                            <a class="nav-link dropdown-item" href="#a4c0189f-800f-a64a-cde2-e651b24c4691">
+                                <span>/user/sendMessage</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="request">
+                        <div class="POST method">
+                            <span>POST</span>
+                        </div>
+                        <div class="request-name" title="/user/getMessages">
+                            <a class="nav-link dropdown-item" href="#b863a8c3-c891-baff-f89e-27f195e1f93f">
+                                <span>/user/getMessages</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="request">
+                        <div class="POST method">
+                            <span>POST</span>
+                        </div>
+                        <div class="request-name" title="/user/auth">
+                            <a class="nav-link dropdown-item" href="#7f8c1523-6d47-20a5-fdb9-0bcb0531cea9">
+                                <span>/user/auth</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="request">
+                        <div class="POST method">
+                            <span>POST</span>
+                        </div>
+                        <div class="request-name" title="/user/sendAbuse">
+                            <a class="nav-link dropdown-item" href="#08f2fbc9-89dd-1788-7af3-bcd31e61b170">
+                                <span>/user/sendAbuse</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="request">
+                        <div class="POST method">
+                            <span>POST</span>
+                        </div>
+                        <div class="request-name" title="/user/approveAbuse">
+                            <a class="nav-link dropdown-item" href="#approveAbuse">
+                                <span>/user/approveAbuse</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="request">
+                        <div class="POST method">
+                            <span>POST</span>
+                        </div>
+                        <div class="request-name" title="/user/contactAdd">
+                            <a class="nav-link dropdown-item" href="#contactAdd">
+                                <span>/user/contactAdd</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="request">
+                        <div class="POST method">
+                            <span>POST</span>
+                        </div>
+                        <div class="request-name" title="/user/contactRemove">
+                            <a class="nav-link dropdown-item" href="#contactRemove">
+                                <span>/user/contactRemove</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="request">
+                        <div class="POST method">
+                            <span>POST</span>
+                        </div>
+                        <div class="request-name" title="/user/getContactsList">
+                            <a class="nav-link dropdown-item" href="#getContactsList">
+                                <span>/user/getContactsList</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="request">
+                        <div class="POST method">
+                            <span>POST</span>
+                        </div>
+                        <div class="request-name" title="/user/setMessageRead">
+                            <a class="nav-link dropdown-item" href="#setMessageRead">
+                                <span>/user/setMessageRead</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="request">
+                        <div class="POST method">
+                            <span>POST</span>
+                        </div>
+                        <div class="request-name" title="/user/deleteMessage">
+                            <a class="nav-link dropdown-item" href="#435fc4e8-ee20-2784-e6ed-566ab178dc15">
+                                <span>/user/deleteMessage</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="request">
+                        <div class="POST method">
+                            <span>POST</span>
+                        </div>
+                        <div class="request-name" title="/user/getProffesionsList">
+                            <a class="nav-link dropdown-item" href="#76ab4107-0c67-9548-66ca-5c20279cfdb8">
+                                <span>/user/getProffesionsList</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="request">
+                        <div class="POST method">
+                            <span>POST</span>
+                        </div>
+                        <div class="request-name" title="/user/addKarma">
+                            <a class="nav-link dropdown-item" href="#addKarma">
+                                <span>/user/addKarma</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="request">
+                        <div class="POST method">
+                            <span>POST</span>
+                        </div>
+                        <div class="request-name" title="/user/getCitiesList">
+                            <a class="nav-link dropdown-item" href="#getCitiesList">
+                                <span>/user/getCitiesList</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="request">
+                        <div class="POST method">
+                            <span>POST</span>
+                        </div>
+                        <div class="request-name" title="user/addOrder">
+                            <a class="nav-link dropdown-item" href="#addOrder">
+                                <span>/user/addOrder</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="request">
+                        <div class="POST method">
+                            <span>POST</span>
+                        </div>
+                        <div class="request-name" title="user/updateOrder">
+                            <a class="nav-link dropdown-item" href="#updateOrder">
+                                <span>/user/updateOrder</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="request">
+                        <div class="POST method">
+                            <span>POST</span>
+                        </div>
+                        <div class="request-name" title="user/getOrders">
+                            <a class="nav-link dropdown-item" href="#getOrders">
+                                <span>/user/getOrders</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="request">
+                        <div class="POST method">
+                            <span>POST</span>
+                        </div>
+                        <div class="request-name" title="user/getOrder">
+                            <a class="nav-link dropdown-item" href="#getOrder">
+                                <span>/user/getOrder</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="request">
+                        <div class="POST method">
+                            <span>POST</span>
+                        </div>
+                        <div class="request-name" title="user/closeOrder">
+                            <a class="nav-link dropdown-item" href="#closeOrder">
+                                <span>/user/closeOrder</span>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://cdn.ravenjs.com/3.26.2/raven.min.js" crossorigin="anonymous"></script>
+<script src="/docs-assets/js/production.min.js" id="script-data-scope" data-var-user-id="4579019"
+        data-var-environment="production" data-var-team-id="0" data-var-domain-url="https://domains.postman.tech/"
+        data-var-host="" data-var-url-prefix="" data-var-version="3.15.4"
+        data-var-sentry-dsn="https://714c749bafde4552896bc6298c2c28a6@sentry.postmanlabs.com/11"></script>
+
+<script type="text/javascript">
+    messenger.queue({
+        "body": "One-click live docs for your teams collections <a href=\"https://www.getpostman.com/pricing#pro-free-trial-7\" target=\"_blank\" class=\"gtm-start-trial\">Try for 7 days and share with your team</a>",
+        "type": "notify",
+        "persist": true
+    });
+</script>
+
+
+<script type="text/javascript" id="">(function (a, d) {
+        var b = !1, c = function (a) {
+            b || (dataLayer.push({event: "documenter_engaged"}), b = !0)
+        };
+        a.setTimeout(function () {
+            a.addEventListener("click", c, !1);
+            d.addEventListener("scroll", c, !1)
+        }, 1E3)
+    })(window, document);</script>
+<script type="text/javascript" id="">var meta = {};
+    meta.url = google_tag_manager["GTM-KCKQFT"].macro(3);
+    dataLayer.push({
+        eventSource: "documenter",
+        eventCategory: "documenter",
+        eventAction: "view",
+        eventLabel: google_tag_manager["GTM-KCKQFT"].macro(4),
+        eventMeta: meta
+    });</script>
+<script type="text/javascript" id="">(function () {
+        var eventData, request = new XMLHttpRequest, eventAPI = {
+                "production": "https://analytics.getpostman.com/event",
+                "staging": "https://analytics.getpostman-beta.com/event"
+            }, apiMethod = "POST", thisEvent = "documenter", thisEnv = "production",
+            EventSource = function (property, type, indexType) {
+                return {"type": type, "property": property, "indexType": indexType}
+            }, eventSources = {
+                "documenter": new EventSource("documenter", "events-website", "client-events"),
+                "echo": new EventSource("echo", "events-website",
+                    "client-events")
+            }, populateIfDefined = function (dataKey, dataLayerValue) {
+                if (dataLayerValue && dataLayerValue !== "undefined" && dataLayerValue !== "null") eventData[dataKey] = dataLayerValue
+            };
+        thisEvent = eventSources[thisEvent];
+        eventAPI = eventAPI[thisEnv];
+        if (thisEvent && eventAPI) {
+            eventData = {
+                "type": thisEvent.type,
+                "indexType": thisEvent.indexType,
+                "env": thisEnv,
+                "property": thisEvent.property,
+                "timestamp": (new Date).toISOString()
+            };
+            populateIfDefined("category", "documenter");
+            populateIfDefined("action", "view");
+            populateIfDefined("label", "undefined");
+            populateIfDefined("value", "undefined");
+            populateIfDefined("meta", google_tag_manager["GTM-KCKQFT"].macro(5));
+            populateIfDefined("userId", "undefined");
+            populateIfDefined("teamId", "undefined");
+            if ("undefined" === "run_in_postman") if ("" && "" !== "undefined") eventData.meta = {referrer: ""};
+            if (google_tag_manager["GTM-KCKQFT"].macro(6)) console.log("Sending LS event:", eventData);
+            eventData = btoa(JSON.stringify(eventData));
+            request.open(apiMethod, eventAPI, true);
+            setTimeout(function () {
+                request.send(eventData)
+            }, 0);
+            dataLayer.push({
+                "eventCategory": "",
+                "eventAction": "",
+                "eventLabel": "",
+                "eventValue": "",
+                "eventSource": "",
+                "eventMeta": {}
+            })
+        }
+    })();</script>
+</body>
+</html>

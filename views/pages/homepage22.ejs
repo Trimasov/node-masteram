@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<!-- saved from url=(0036)http://t50020r5.beget.tech/masteram/ -->
+<html lang="ru"><script type="text/javascript" src="chrome-extension://kajfghlhfkcocafkcjlajldicbikpgnp/catcher.js"><!-- script injected by Request Maker --></script><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+    <!-- <base href="/"> -->
+
+    <title>скачать бесплатно: приложение MASTERAM для быстрого поиска мастеров, строителей в Сочи и Краснодаре. </title>
+    <meta name="description" content="MASTERAM – удобное мобильное приложение, в чате которого можно за 10 минут найти специалиста по строительству и ремонту в Краснодарском крае. Работы мастеров Сочи и Краснодара можно посмотреть в портфолио. В режиме онлайн заказчик и исполнитель размещают свои запросы и предложения, назначают встречи, обсуждают рабочие моменты по строительству домов или ремонту квартир. Приложение отличается простотой использования, легко загружается на мобильное устройство и не требует большого запаса памяти.">
+    <meta name="keywords" content="
+        Отделка Сочи, Отделка Краснодар, Ремонт квартира Краснодар, Строительство Краснодар, Строительство домов Краснодар,
+        Строительный Краснодар, Монтаж строительство Краснодар, Строительство в Сочи, Ремонт квартир Сочи, Мастера Сочи
+        Строительные компании Сочи, Строительные компании Краснодар, Строительство дом Краснодар, Строительство в Сочи
+    ">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Template Basic Images Start -->
+    <meta property="og:image" content="path/to/image.jpg">
+    <link rel="icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="http://t50020r5.beget.tech/masteram/img/favicon/apple-touch-icon-180x180.png">
+    <!-- Template Basic Images End -->
+
+    <!-- Custom Browsers Color Start -->
+    <meta name="theme-color" content="#000">
+    <!-- Custom Browsers Color End -->
+
+
+    <!--MAIN STYLES-->
+    <link rel="stylesheet" href="/css/main.min.css">
+    <style>
+        .has-error{
+            border-color: #ae221b;
+        }
+
+        .city_selected,  .area_selected{
+            display: none;
+        }
+    </style>
+    <script type="text/javascript">!function(){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src="https://vk.com/js/api/openapi.js?160",t.onload=function(){VK.Retargeting.Init("VK-RTRG-345073-41fQn"),VK.Retargeting.Hit()},document.head.appendChild(t)}();</script><noscript><img src="https://vk.com/rtrg?p=VK-RTRG-345073-41fQn" style="position:fixed; left:-999px;" alt=""/></noscript>
+
+</head>
+
+<body cz-shortcut-listen="true">	<div class="body-wrap">
+
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="/images/landing/h-logo.png" alt="">
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a class="2id __mPS2id _mPS2id-h" href="#about">О приложении</a></li>
+                    <li><a class="2id __mPS2id _mPS2id-h" href="#create_order">Оставте заявку</a></li>
+                    <li><a class="2id __mPS2id _mPS2id-h" href="#works">Работы наших мастеров</a></li>
+                    <li><a class="2id __mPS2id _mPS2id-h mPS2id-clicked mPS2id-highlight mPS2id-highlight-first" href="#feedback">Наши отзывы</a></li>
+                </ul>
+            </div>
+            <button class="hamburger hamburger--spin" onclick="menuActivity();">
+                <div class="hamburger-box">
+                    <div class="hamburger-inner"></div>
+                </div>
+            </button>
+        </div>
+        <div class="hamburger-menu">
+            <div class="container">
+                <ul>
+                    <li><a class="2id __mPS2id _mPS2id-h" href="#about" onclick="menuActivity();">О приложении</a></li><br>
+                    <li><a class="2id __mPS2id _mPS2id-h" href="#create_order" onclick="menuActivity();">Оставте заявку</a></li><br>
+                    <li><a class="2id __mPS2id _mPS2id-h" href="#works" onclick="menuActivity();">Работы наших мастеров</a></li><br>
+                    <li><a class="2id __mPS2id _mPS2id-h mPS2id-highlight mPS2id-highlight-last" href="#feedback" onclick="menuActivity();">Наши отзывы</a></li><br>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <section class="banner">
+        <div class="container">
+            <div class="content">
+                <p class="text">Поиск мастеров в Сочи и Краснодаре</p>
+                <h1>MASTERAM – чат для мастеров и заказчиков</h1>
+                <p class="about">Нужны мастера по строительству домов в Краснодаре или специалисты по ремонту квартир в Сочи? <br/>
+                    MASTERAM – первое приложение для поиска мастеров-строителей в твоём городе</p>
+                <div class="link-wrap">
+                    <a href="/">
+                        <div class="button" id="download_button">
+                            Загрузить <img style="width: 30px" src="/images/landing/gplay.png" alt=""/>
+                        </div>
+                    </a>
+                    <a class="2id __mPS2id _mPS2id-h" href="#works">
+                        <div class="play">
+                            <img src="/images/landing/s1-play.png" alt=""><p>Посмотреть работы наших мастеров</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="back">
+                <img class="circle" src="/images/landing/s1-circle.png" alt="">
+                <img class="icons wow fadeInUp animated" data-wow-delay="1s" src="/images/landing/s1-icons.png" alt="" style="visibility: visible; animation-delay: 1s; animation-name: fadeInUp;">
+                <img class="phone" src="/images/landing/s1-phone.png" alt="">
+            </div>
+        </div>
+    </section>
+    <section class="features">
+        <div class="bg">
+            <img src="/images/landing/s2-bg.png" alt="">
+        </div>
+        <div class="container">
+            <div class="s-title _mPS2id-t" id="about">
+                <h2>Для чего нужен Masteram?</h2>
+            </div>
+            <div class="items">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="item">
+                            <div class="img-wrap">
+                                <img src="/images/landing/s2-check.png" alt="">
+                            </div>
+                            <p class="title">Поиск заказов</p>
+                            <p class="text">
+                                В чате вашего города находятся как и
+                                мастера, так и прорабы, застройщики.
+                                Им постоянно требуются мастера
+                                разных специальностей на
+                                конкретные работы, причем как
+                                обычно все нужно "срочно"!! Это лишь
+                                один вид предложений по работе,
+                                больше увидите в самом чате!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="item">
+                            <div class="img-wrap">
+                                <img src="/images/landing/s2-check.png" alt="">
+                            </div>
+                            <p class="title">Поиск подсобников</p>
+                            <p class="text">
+                                Так бывает, что попадаются заказы где
+                                нужны работники в помощь.
+                                Предложите работу в чате и в режиме
+                                реального времени на ваш запрос
+                                ответят свободные работники.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="item">
+                            <div class="img-wrap">
+                                <img src="/images/landing/s2-check.png" alt="">
+                            </div>
+                            <p class="title">Нужен совет специалистов</p>
+                            <p class="text">
+                                В чате находятся мастера разных
+                                специальностей и они обладают
+                                информацией по товарам, о "плохих"
+                                заказчиках. Сообщество это сила,
+                                дающая мастерам обладать
+                                информацией!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="create_order" style="padding: 50px 0 0px 0">
+        <div class="container">
+            <div class="s-title _mPS2id-t" id="create_order">
+                <h2 style="font-family: Ubuntu-Medium,sans-serif;
+    font-size: 30px;
+    line-height: 35px;">Оставте заявку мастерам</h2>
+            </div>
+            <div class="content" style="margin: 0px 10px">
+                <div id="step1">
+                    <form>
+                        <div class="form-group row mt-3"><label for="area" style="font-size: 18px;">Регион: </label>
+                            <select id="area" name="area" class="form-control">
+                                <option></option>
+                                <% for (let area in sails.config.globals.citylist){ %>
+                                <option value="<%= area %>"><%= area %></option>
+                                <% } %>
+                            </select>
+                        </div>
+
+                        <div class="form-group row mt-3 area_selected"><label for="topic" style="font-size: 18px;">Город: </label>
+                            <select id="topic" name="topic" class="form-control">
+                                <option></option>
+                            </select>
+                        </div>
+
+                        <div class="form-group row mt-3 city_selected" ><label for="jobType" style="font-size: 18px;">Необходимый специалист: </label>
+                            <select id="jobType" name="jobType" class="form-control">
+                                <option>Не знаю</option>
+                                <% for (let proff in sails.config.globals.proffesions){ %>
+                                <option value="<%= proff %>"><%= sails.config.globals.proffesions[proff] %></option>
+                                <% } %>
+                            </select>
+                        </div>
+
+                        <div class="form-group row mt-3 city_selected"><label for="description" style="font-size: 18px;">Описание работ: </label>
+                            <textarea id="description" name="description" autocomplete="off" class="form-control" placeholder="Описание требующихся работ"></textarea>
+                        </div>
+
+                        <div class="form-group row mt-3 city_selected">
+                            <label for="name" style="font-size: 18px;">Ваше имя: </label>
+                            <input id="name" name="name" autocomplete="off" class="form-control" placeholder="Ваше имя:"/>
+                        </div>
+                        <div class="form-group row mt-3 city_selected">
+                            <label for="phoneNumber" style="font-size: 18px;">Номер телефона: </label>
+                            <input id="phoneNumber" name="phoneNumber" autocomplete="off" placeholder="+7(987)654-32-10" class="form-control" />
+                        </div>
+
+                        <div class="row city_selected">
+                            <button type="button" id="sendOrder" style="vertical-align: middle;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    font-family: Ubuntu-Bold,sans-serif;
+    color: #fff;
+    padding: 15px 33px 15px 33px;
+    background-color: #13ce67;
+    border-color: #13ce67;
+    border-style: solid;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    margin-right: 34px;
+    -webkit-transition: background-color .4s;
+    -o-transition: background-color .4s;
+    transition: background-color .4s; cursor: pointer;">Отправить заявку мастерам</button>
+                        </div>
+                    </form>
+                </div>
+                <div id="step2" style="display: none; font-size: 21px; margin-top: 10px">
+                    Заявка отправлена, мастера свяжутся с Вами
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="advantages">
+        <div class="container">
+            <div class="s-title">
+                <h2>Какие преимущества у Masteram?</h2>
+            </div>
+            <div class="content">
+                <div class="items">
+                    <div class="item">
+                        <div class="img-wrap">
+                            <img src="/images/landing/photos/s3-item1.jpg" alt="">
+                        </div>
+                        <div class="text-wrap">
+                            <p>Одно приложение вместо
+                                нескольких групп в разных
+                                мессенджерах</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="img-wrap">
+                            <img src="/images/landing/photos/s3-item2.jpg" alt="">
+                        </div>
+                        <div class="text-wrap">
+                            <p>При переезде достаточно
+                                только сменить город, и
+                                попасть в чат нового
+                                города</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="img-wrap">
+                            <img src="/images/landing/photos/s3-item3.jpg" alt="">
+                        </div>
+                        <div class="text-wrap">
+                            <p>Простой и знакомый
+                                интерфейс</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="img-wrap">
+                            <img src="/images/landing/photos/s3-item4.jpg" alt="">
+                        </div>
+                        <div class="text-wrap">
+                            <p>Все в режиме реального
+                                времени - общайся,
+                                получай заказы,
+                                находи работников</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="img-wrap">
+                            <img src="/images/landing/photos/s3-item5.jpg" alt="">
+                        </div>
+                        <div class="text-wrap">
+                            <p>Создай свое портфолио и
+                                сразу можешь показывать
+                                свои работы</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="works">
+        <div class="container">
+            <div class="s-title _mPS2id-t" id="works">
+                <h2>Работы мастеров</h2>
+                <p>Примеры выполненных работ, которыми <br>
+                    гордятся наши пользователи</p>
+            </div>
+            <div class="content">
+                <div class="mobile-tabs">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Выберите категорию
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item active" data-item="tab-item1">Альбом #1</a>
+                            <a class="dropdown-item" data-item="tab-item2">Альбом #2</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="tabs">
+                    <div class="tab active" data-item="tab-item1"><p>Альбом #1</p></div>
+                    <div class="tab" data-item="tab-item2"><p>Альбом #2</p></div>
+                </div>
+                <div class="items">
+                    <div class="popup_zoom_gallery tab-item tab-item1 active">
+                        <div class="row">
+                            <% for (let i = 1; i< 13; i++) {%>
+
+                                <div class="col-md-3 col-6">
+                                    <a href="/images/landing/photos/s4-item<%= i %>.jpg">
+                                        <div class="item">
+                                            <img src="/images/landing/photos/s4-item<%= i %>.jpg" alt="">
+                                            <div class="hover">
+                                                <img src="/images/landing/zoom.png" alt="">
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+
+                            <% } %>
+                        </div>
+                    </div>
+                    <div class="popup_zoom_gallery tab-item tab-item2">
+                        <div class="row">
+                            <% for (let i = 1; i< 13; i++) {%>
+
+                            <div class="col-md-3 col-6">
+                                <a href="/images/landing/photos/s5-item<%= i %>.jpg">
+                                    <div class="item">
+                                        <img src="/images/landing/photos/s5-item<%= i %>.jpg" alt="">
+                                        <div class="hover">
+                                            <img src="/images/landing/zoom.png" alt="">
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <% } %>
+                        </div>
+                    </div>
+                    <div class="popup_zoom_gallery tab-item tab-item3">
+                        <div class="row">
+                            <div class="col-md-3 col-6">
+                                <a href="/images/landing/photos/s4-item1.jpg">
+                                    <div class="item">
+                                        <img src="/images/landing/photos/s4-item1.jpg" alt="">
+                                        <div class="hover">
+                                            <img src="/images/landing/zoom.png" alt="">
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <a href="/images/landing/photos/s4-item1.jpg">
+                                    <div class="item">
+                                        <img src="/images/landing/photos/s4-item1.jpg" alt="">
+                                        <div class="hover">
+                                            <img src="/images/landing/zoom.png" alt="">
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <a href="/images/landing/photos/s4-item1.jpg">
+                                    <div class="item">
+                                        <img src="/images/landing/photos/s4-item1.jpg" alt="">
+                                        <div class="hover">
+                                            <img src="/images/landing/zoom.png" alt="">
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <a href="/images/landing/photos/s4-item1.jpg">
+                                    <div class="item">
+                                        <img src="/images/landing/photos/s4-item1.jpg" alt="">
+                                        <div class="hover">
+                                            <img src="/images/landing/zoom.png" alt="">
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <a href="/images/landing/photos/s4-item1.jpg">
+                                    <div class="item">
+                                        <img src="/images/landing/photos/s4-item1.jpg" alt="">
+                                        <div class="hover">
+                                            <img src="/images/landing/zoom.png" alt="">
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <a href="/images/landing/photos/s4-item1.jpg">
+                                    <div class="item">
+                                        <img src="/images/landing/photos/s4-item1.jpg" alt="">
+                                        <div class="hover">
+                                            <img src="/images/landing/zoom.png" alt="">
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <a href="/images/landing/photos/s4-item1.jpg">
+                                    <div class="item">
+                                        <img src="/images/landing/photos/s4-item1.jpg" alt="">
+                                        <div class="hover">
+                                            <img src="/images/landing/zoom.png" alt="">
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <a href="/images/landing/photos/s4-item1.jpg">
+                                    <div class="item">
+                                        <img src="/images/landing/photos/s4-item1.jpg" alt="">
+                                        <div class="hover">
+                                            <img src="/images/landing/zoom.png" alt="">
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup_zoom_gallery tab-item tab-item4">
+                        <div class="row">
+                            <div class="col-md-3 col-6">
+                                <a href="/images/landing/photos/s4-item1.jpg">
+                                    <div class="item">
+                                        <img src="/images/landing/photos/s4-item1.jpg" alt="">
+                                        <div class="hover">
+                                            <img src="/images/landing/zoom.png" alt="">
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <a href="/images/landing/photos/s4-item1.jpg">
+                                    <div class="item">
+                                        <img src="/images/landing/photos/s4-item1.jpg" alt="">
+                                        <div class="hover">
+                                            <img src="/images/landing/zoom.png" alt="">
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <a href="/images/landing/photos/s4-item1.jpg">
+                                    <div class="item">
+                                        <img src="/images/landing/photos/s4-item1.jpg" alt="">
+                                        <div class="hover">
+                                            <img src="/images/landing/zoom.png" alt="">
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <a href="/images/landing/photos/s4-item1.jpg">
+                                    <div class="item">
+                                        <img src="/images/landing/photos/s4-item1.jpg" alt="">
+                                        <div class="hover">
+                                            <img src="/images/landing/zoom.png" alt="">
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup_zoom_gallery tab-item tab-item4">
+                        <div class="row">
+                            <div class="col-md-3 col-6">
+                                <a href="/images/landing/photos/s4-item1.jpg">
+                                    <div class="item">
+                                        <img src="/images/landing/photos/s4-item1.jpg" alt="">
+                                        <div class="hover">
+                                            <img src="/images/landing/zoom.png" alt="">
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <a href="/images/landing/photos/s4-item1.jpg">
+                                    <div class="item">
+                                        <img src="/images/landing/photos/s4-item1.jpg" alt="">
+                                        <div class="hover">
+                                            <img src="/images/landing/zoom.png" alt="">
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <a href="/images/landing/photos/s4-item1.jpg">
+                                    <div class="item">
+                                        <img src="/images/landing/photos/s4-item1.jpg" alt="">
+                                        <div class="hover">
+                                            <img src="/images/landing/zoom.png" alt="">
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <a href="/images/landing/photos/s4-item1.jpg">
+                                    <div class="item">
+                                        <img src="/images/landing/photos/s4-item1.jpg" alt="">
+                                        <div class="hover">
+                                            <img src="/images/landing/zoom.png" alt="">
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup_zoom_gallery tab-item tab-item5">
+                        <div class="row">
+                            <div class="col-md-3 col-6">
+                                <a href="/images/landing/photos/s4-item1.jpg">
+                                    <div class="item">
+                                        <img src="/images/landing/photos/s4-item1.jpg" alt="">
+                                        <div class="hover">
+                                            <img src="/images/landing/zoom.png" alt="">
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <a href="/images/landing/photos/s4-item1.jpg">
+                                    <div class="item">
+                                        <img src="/images/landing/photos/s4-item1.jpg" alt="">
+                                        <div class="hover">
+                                            <img src="/images/landing/zoom.png" alt="">
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <a href="/images/landing/photos/s4-item1.jpg">
+                                    <div class="item">
+                                        <img src="/images/landing/photos/s4-item1.jpg" alt="">
+                                        <div class="hover">
+                                            <img src="/images/landing/zoom.png" alt="">
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <a href="/images/landing/photos/s4-item1.jpg">
+                                    <div class="item">
+                                        <img src="/images/landing/photos/s4-item1.jpg" alt="">
+                                        <div class="hover">
+                                            <img src="/images/landing/zoom.png" alt="">
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <a href="/images/landing/photos/s4-item1.jpg">
+                                    <div class="item">
+                                        <img src="/images/landing/photos/s4-item1.jpg" alt="">
+                                        <div class="hover">
+                                            <img src="/images/landing/zoom.png" alt="">
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <a href="/images/landing/photos/s4-item1.jpg">
+                                    <div class="item">
+                                        <img src="/images/landing/photos/s4-item1.jpg" alt="">
+                                        <div class="hover">
+                                            <img src="/images/landing/zoom.png" alt="">
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <a href="/images/landing/photos/s4-item1.jpg">
+                                    <div class="item">
+                                        <img src="/images/landing/photos/s4-item1.jpg" alt="">
+                                        <div class="hover">
+                                            <img src="/images/landing/zoom.png" alt="">
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <a href="/images/landing/photos/s4-item1.jpg">
+                                    <div class="item">
+                                        <img src="/images/landing/photos/s4-item1.jpg" alt="">
+                                        <div class="hover">
+                                            <img src="/images/landing/zoom.png" alt="">
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup_zoom_gallery tab-item tab-item6">
+                        <div class="row">
+                            <div class="col-md-3 col-6">
+                                <a href="/images/landing/photos/s4-item1.jpg">
+                                    <div class="item">
+                                        <img src="/images/landing/photos/s4-item1.jpg" alt="">
+                                        <div class="hover">
+                                            <img src="/images/landing/zoom.png" alt="">
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <a href="/images/landing/photos/s4-item1.jpg">
+                                    <div class="item">
+                                        <img src="/images/landing/photos/s4-item1.jpg" alt="">
+                                        <div class="hover">
+                                            <img src="/images/landing/zoom.png" alt="">
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <a href="/images/landing/photos/s4-item1.jpg">
+                                    <div class="item">
+                                        <img src="/images/landing/photos/s4-item1.jpg" alt="">
+                                        <div class="hover">
+                                            <img src="/images/landing/zoom.png" alt="">
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <a href="/images/landing/photos/s4-item1.jpg">
+                                    <div class="item">
+                                        <img src="/images/landing/photos/s4-item1.jpg" alt="">
+                                        <div class="hover">
+                                            <img src="/images/landing/zoom.png" alt="">
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <a href="/images/landing/photos/s4-item1.jpg">
+                                    <div class="item">
+                                        <img src="/images/landing/photos/s4-item1.jpg" alt="">
+                                        <div class="hover">
+                                            <img src="/images/landing/zoom.png" alt="">
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <a href="/images/landing/photos/s4-item1.jpg">
+                                    <div class="item">
+                                        <img src="/images/landing/photos/s4-item1.jpg" alt="">
+                                        <div class="hover">
+                                            <img src="/images/landing/zoom.png" alt="">
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <a href="/images/landing/photos/s4-item1.jpg">
+                                    <div class="item">
+                                        <img src="/images/landing/photos/s4-item1.jpg" alt="">
+                                        <div class="hover">
+                                            <img src="/images/landing/zoom.png" alt="">
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <a href="/images/landing/photos/s4-item1.jpg">
+                                    <div class="item">
+                                        <img src="/images/landing/photos/s4-item1.jpg" alt="">
+                                        <div class="hover">
+                                            <img src="/images/landing/zoom.png" alt="">
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup_zoom_gallery tab-item tab-item7">
+                        <div class="row">
+                            <div class="col-md-3 col-6">
+                                <a href="/images/landing/photos/s4-item1.jpg">
+                                    <div class="item">
+                                        <img src="/images/landing/photos/s4-item1.jpg" alt="">
+                                        <div class="hover">
+                                            <img src="/images/landing/zoom.png" alt="">
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <a href="/images/landing/photos/s4-item1.jpg">
+                                    <div class="item">
+                                        <img src="/images/landing/photos/s4-item1.jpg" alt="">
+                                        <div class="hover">
+                                            <img src="/images/landing/zoom.png" alt="">
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <a href="/images/landing/photos/s4-item1.jpg">
+                                    <div class="item">
+                                        <img src="/images/landing/photos/s4-item1.jpg" alt="">
+                                        <div class="hover">
+                                            <img src="/images/landing/zoom.png" alt="">
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="feedback">
+        <div class="container">
+            <div class="s-title _mPS2id-t mPS2id-target mPS2id-target-first mPS2id-target-last" id="feedback">
+                <h2>НАШИ ОТЗЫВЫ</h2>
+                <p>Что люди говорят о приложении?</p>
+            </div>
+            <div class="content">
+                <div class="items">
+                    <div class="feedback-tab-item feedback-tab-item1">
+                        <p>
+                            Регулярно использую приложение для поиска работ.
+                            Удобные функции, ничего лишнего, реальные заказы.
+                        </p>
+                        <div class="stars">
+                            <img src="/images/landing/s5-star.png" alt=""><img src="/images/landing/s5-star.png" alt=""><img src="/images/landing/s5-star.png" alt=""><img src="/images/landing/s5-star.png" alt=""><img src="/images/landing/s5-star.png" alt="">
+                        </div>
+                    </div>
+                    <div class="feedback-tab-item feedback-tab-item2 active">
+                        <p>
+                            Нужен был ремонт квартиры, искала по разным сайтам мастеров, приходили непонятно кто.
+                            Здесь написала и в течении нескольких минут ответили мастера, договорились, подъехали и очень быстро и качественно сделали ремонт. Спасибо за удобное приложение.
+                        </p>
+                        <div class="stars">
+                            <img src="/images/landing/s5-star.png" alt=""><img src="/images/landing/s5-star.png" alt=""><img src="/images/landing/s5-star.png" alt=""><img src="/images/landing/s5-star.png" alt=""><img src="/images/landing/s5-star.png" alt="">
+                        </div>
+                    </div>
+                    <div class="feedback-tab-item feedback-tab-item3">
+                        <p>
+                            Строили с мужем дом и не могли найти каменщиков, знакомые заняты, с других сайтов приходили посредники всякие. В Masteram муж написал и очень быстро ответили ребята, как раз были свободные, все посчитали, закупили, и в срок построили. Очень рада, что воспользовались таким сервисом.
+                        </p>
+                        <div class="stars">
+                            <img src="/images/landing/s5-star.png" alt=""><img src="/images/landing/s5-star.png" alt=""><img src="/images/landing/s5-star.png" alt=""><img src="/images/landing/s5-star.png" alt=""><img src="/images/landing/s5-star.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="tabs">
+                    <div class="feedback-tab" data-item="feedback-tab-item1">
+                        <div class="img-wrap"><img src="/images/landing/otziv1.jpg" alt=""></div>
+                        <p>Максим Климов</p>
+                    </div>
+                    <div class="feedback-tab active" data-item="feedback-tab-item2">
+                        <div class="img-wrap"><img src="/images/landing/otziv2.jpg" alt=""></div>
+                        <p>Надежда Расковая</p>
+                    </div>
+                    <div class="feedback-tab" data-item="feedback-tab-item3">
+                        <div class="img-wrap"><img src="/images/landing/otziv3.jpg" alt=""></div>
+                        <p>Светлана Топилина</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="download">
+        <div class="container">
+            <div class="s-title">
+                <h2>Чего же ты ждешь?</h2>
+                <p>Скачай Masteram сейчас и получи доступ к строительному сообществу <br>
+                    в твоём городе!</p>
+                <a href="#download_button">
+                    <div class="button">
+                        Загрузить<img src="/images/landing/s1-download.png" alt="">
+                    </div>
+                </a>
+            </div>
+            <div class="back">
+                <img class="icons wow fadeInUp animated" data-wow-offset="350" data-wow-delay="0.5s" src="/images/landing/s6-icons.png" alt="" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="t1">
+                <div class="logo">
+                    <img src="/images/landing/f-logo.png" alt="">
+                </div>
+                <div class="social">
+                    <a href=""><img src="/images/landing/f-vk.png" alt=""></a>
+                    <a href=""><img src="/images/landing/f-fb.png" alt=""></a>
+                    <a href=""><img src="/images/landing/f-tw.png" alt=""></a>
+                </div>
+                <p class="text">Copyright (c) 2018 Masteram.</p>
+                <p class="text">All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</div>
+
+
+<!--STYLES-->
+<link rel="stylesheet" href="/css/magnific-popup.css">
+<link rel="stylesheet" href="/css/animate.css">
+
+<!--SCRIPTS-->
+<script src="/js/scripts.min.js"></script>
+<script src="/js/bootstrap.bundle.min.js"></script>
+<script src="/js/jquery.magnific-popup.min.js"></script>
+<!--<script src="/js/jquery.malihu.PageScroll2id.min.js"></script>-->
+<script src="/js/jquery.maskedinput.min.js"></script>
+<script src="https://unpkg.com/imask"></script>
+<script>
+    //{
+    //	if ($(window).width() > 1200) document.write ('<script src="js/wow.min.js"></sc' + 'ript>');
+    //		}
+</script><script src="/js/wow.min.js"></script>
+<script>
+    wow = new WOW(
+        {
+            boxClass:     'wow',      // default
+            animateClass: 'animated', // default
+            offset:       0,          // default
+            mobile:       false,       // default
+            live:         true        // default
+        }
+    )
+    wow.init();
+
+
+    let element = document.getElementById('phoneNumber');
+    let maskOptions = {
+        mask: '+{7}(000)000-00-00'
+    };
+    let mask = new IMask(element, maskOptions);
+
+    let citylist = <%- JSON.stringify(sails.config.globals.citylist) %>;
+
+
+    $("#area").change((function(){
+        $(".area_selected").show(100);
+        let first_option = $(this).find("option").first();
+        if (first_option.text().length == 0){
+            $(this).find("option").first().remove();
+        }
+        $("#topic").html("<option></option>")
+        citylist[$(this).val()].forEach((city)=>{
+            $("#topic").append(`<option value=\"${city}\">${city}</option>`)
+        });
+        $(".city_selected").hide(100);
+    }));
+
+    $("#topic").change(function(){
+        $(".city_selected").show(100);
+        let first_option = $(this).find("option").first();
+        if (first_option.text().length == 0){
+            $(this).find("option").first().remove();
+        }
+    })
+
+
+
+    $("#sendOrder").click(() => {
+        let formDiv = $("#step1");
+        let error = false;
+
+        if (formDiv.find("#description").val().length > 0){
+            formDiv.find("#description").removeClass("has-error");
+        }else{
+            formDiv.find("#description").addClass("has-error");
+            error = true;
+        }
+
+        if (formDiv.find("#phoneNumber").val().length > 10){
+            formDiv.find("#phoneNumber").removeClass("has-error");
+        }else{
+            formDiv.find("#phoneNumber").addClass("has-error");
+            error = true;
+        }
+
+        if (formDiv.find("#name").val().length > 0){
+            formDiv.find("#name").removeClass("has-error");
+        }else{
+            formDiv.find("#name").addClass("has-error");
+            error = true;
+        }
+
+        if (!error){
+            data = {};
+            $("#step1 form").serializeArray().forEach((l)=>{
+                data[l.name] = l.value;
+            })
+            $("#step1").toggle();
+            $("#step2").toggle();
+            $.ajax({
+                url: "/order/registerorder",
+                type: "POST",
+                data: data,
+                success: (data)=>{
+                    console.log(data);
+                }
+            })
+        }
+    })
+
+    $(function(){
+        $('#area option').first().attr("selected", true);
+        $('#area option').trigger("change");
+    })
+
+</script>
+<script></script>
+
+
+</body></html>

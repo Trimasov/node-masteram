@@ -1,0 +1,49 @@
+<div class="row">
+    <div class="col-xs-9">
+        <div id="chat" style="height: 600px; overflow-x: scroll; display: inline-block;"></div>
+    </div>
+    <div class="col-xs-3">
+        <ul class="list-group" id="cities">
+            <% for (let city in config.citylist) { %>
+            <li class="list-group-item"><%= city %>
+                <ul class="list-group">
+                <% config.citylist[city].forEach((ele)=>{ %>
+                    <li class="list-group-item">
+                        <button type="button" class="btn btn-block btn-primary"><%= ele %></button>
+                    </li>
+                <% }) %>
+                </ul>
+            </li>
+            <% } %>
+        </ul>
+
+    </div>
+</div>
+<script>
+    $(function () {
+
+        $("#cities button").click(function(){
+            getChatData($(this).text());
+        })
+
+
+
+
+        function getChatData(topic){
+            $.ajax({
+                type: "POST",
+                data: {topic: topic, action: "messages"},
+                success: (data)=>{
+                    $("#chat").html("");
+                    if (data.messages && data.messages.length){
+                        data.messages.forEach((message)=>{
+                            let d = new Date();
+                            d.setTime(message.createdAt)
+                            $("#chat").append($(`<div><span class="time" style="color: #2b7b66">${d.getFullYear()}.${d.getMonth()} ${d.getHours()}:${d.getMinutes()}</span> ${message.messageType !== "banner" ? message.user.name: "рекалма"}:${message.text}</div>`));
+                        })
+                    }
+                }
+            })
+        }
+    })
+</script>

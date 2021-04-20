@@ -1,0 +1,50 @@
+<canvas id="container" class="container" style="height: 100%"></canvas>
+<script type="text/javascript">
+    <%
+        function random_rgba() {
+            var o = Math.round, r = Math.random, s = 255;
+            return '"rgba(' + o(r()*s) + ',' + o(r()*s) + ',' + o(r()*s) + ',' + r().toFixed(1) + ')"';
+        }
+    %>
+    let ctx = document.getElementById("container").getContext('2d');
+    <% let x = 10 , y = 25, z = 120%>
+    let myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: <%- JSON.stringify(labels) %>,
+            datasets: [
+                <% for (let city in chartDataByCity){ %>
+                    <% let rgb = random_rgba() %>
+                {
+                    label: "<%= city %>",
+                    data: [
+                        <% labels.forEach((label)=>{ %><%= chartDataByCity[city][label] ? chartDataByCity[city][label].length : 0 %>,<% }) %>
+                    ],
+                    backgroundColor: <%- rgb %>,
+                    borderColor: <%- rgb %>,
+                    borderWidth: 1
+                },
+
+                <% } %>
+            ]
+        },
+        options: {
+            responsive: true,
+            title: {
+                display: true,
+                text: 'Chart.js Line Chart'
+            },
+            tooltips: {
+                mode: 'index',
+                intersect: false,
+            },
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero:true
+                    }
+                }]
+            }
+        }
+    });
+</script>

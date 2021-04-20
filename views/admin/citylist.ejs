@@ -1,0 +1,130 @@
+<form class="content">
+    <div class="row">
+
+        <div class="col-md-9">
+            <div class="row mb-2">
+                <div class="col-md-3">
+                    <button type="button" class="btn btn-block btn-success" id="cityAdd">Добавить город</button>
+                </div>
+                <div class="col-md-3">
+                    <button type="button" class="btn btn-block btn-primary" id="cityListSave">Сохранить</button>
+                </div>
+            </div>
+
+            <ul id="cities" class="list-group" style="margin-top: 10px;">
+
+            <% if (config){ for (let city in config.citylist) { %>
+
+                <li class="list-group-item">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <div class="input-group input-group-sm">
+                                <input class="form-control cityname" type="text" value="<%= city %>" placeholder='название города'/>
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn btn-danger btn-flat deleteCity"><span class="glyphicon glyphicon-remove"></span></button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row areas" style="margin-top: 10px">
+                        <div class="col-md-2">
+                            <button type="button" class="btn btn-block btn-success addArea" style='margin-top: 5px;' id="cityAdd">Добавить район</button>
+                        </div>
+                        <% config.citylist[city].forEach((n)=>{ %>
+                        <div style="margin-top: 5px;" class="col-md-2">
+                            <div class="input-group input-group-sm">
+                                <input type="text"  class="form-control" value="<%= n %>" placeholder='название района'>
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn btn-danger btn-flat"><span class="glyphicon glyphicon-remove deleteArea"></span></button>
+                                </span>
+                            </div>
+
+                        </div>
+                        <% }) %>
+
+                    </div>
+                </li>
+            <% }} %>
+            </ul>
+
+        </div>
+    </div>
+
+    <ul class="hidden" id="li-template">
+    <li class="list-group-item" >
+        <div class="row">
+            <div class="col-md-2">
+                <div class="input-group input-group-sm">
+                    <input type="text"  class="form-control cityname" value="" placeholder='название города'>
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-danger btn-flat deleteCity"><span class="glyphicon glyphicon-remove"></span></button>
+                    </span>
+                </div>
+
+            </div>
+        </div>
+        <div class="row areas" style="margin-top: 10px">
+            <div class="col-md-2">
+                <button type="button" class="btn btn-block btn-success addArea" style='margin-top: 5px;' id="cityAdd">Добавить район</button>
+            </div>
+        </div>
+    </li>
+    </ul>
+
+    <div class="hidden areatemplate">
+        <div style="margin-top: 5px;" class="col-md-2">
+            <div class="input-group input-group-sm">
+                <input type="text"  class="form-control" value="" placeholder='название района'>
+                <span class="input-group-btn">
+                    <button type="button" class="btn btn-danger btn-flat"><span class="glyphicon glyphicon-remove deleteArea"></span></button>
+                </span>
+            </div>
+        </div>
+    </div>
+
+</form>
+<script>
+    $(function(){
+        $("#cityAdd").click(function(){
+            $("#cities").append($("#li-template").html());
+            addArea();
+
+        })
+        addArea();
+
+        $('#cityListSave').click(function(){
+            let res = {};
+            $("#cities").find("li").each(function(){
+                let city = $(this).find(".cityname").eq(0).val();
+                res[city] = [];
+                $(this).find(".areas input").each(function(){
+                    res[city].push($(this).val())
+                });
+            });
+            $.ajax({
+                method: "POST",
+                type: "json",
+                data: {res: res},
+            })
+        });
+
+    })
+
+    function addArea(){
+        $('.addArea').unbind("click").bind("click", function(){
+            $(this).parents('.areas').append($(".areatemplate").html())
+        });
+
+        $('.deleteArea').unbind("click").bind("click", function(){
+            $(this).parents('div.col-md-2').remove();
+        })
+
+        $('.deleteCity').unbind("click").bind("click", function(){
+            if (confirm("Точно удалить этот город?")){
+                $(this).parents('li').remove();
+            }
+
+        })
+    }
+
+</script>

@@ -1,0 +1,34 @@
+<div class="box">
+    <div class="box-body table-responsive no-padding">
+        <table id="list1" class="table table-bordered table-hover dataTable">
+            <thead>
+			<th>ID</th>
+			<th style="width: 100px;">Имя Фамилия</th>
+            <th>Телефон</th>
+            <th>Рекомендован до</th>
+            <th>Дата регистрации</th>
+            <th>Специальности</th>
+            </thead>
+            <tbody>
+            <% for (const user of chartData){ %>
+            <% let d = new Date(); %>
+            <tr>
+                <td><%= user.id %></td>
+                <td><%= `${user.name} ${user.surname}` %></td>
+                <td><span style="color: #460014; font-weight: bold; margin-right: 10px;"><%= user.phoneNumber %></span></td>
+				<td><% d.setTime(user.recommendedEnd * 1000) %><%= d.toLocaleDateString() %></td>
+				<td><% d.setTime(user.createdAt) %><%= d.toLocaleDateString() %></td>
+                <td><%= user.jobTypes %></td>
+            </tr>
+            <% } %>
+            </tbody>
+        </table>
+    </div>
+</div>
+<script>
+    $(function () {
+        $("#list1").DataTable({
+            "pageLength": 15
+        });
+    });
+</script>
